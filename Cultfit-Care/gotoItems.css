@@ -1,0 +1,200 @@
+
+.main-div {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 50px;
+    height: auto;
+}
+
+@media only screen and (max-width: 870px) {
+    .main-div {
+        grid-template-columns: 100%;
+    }
+}
+
+.main-div>div {
+    padding: 70px;
+}
+
+.show-img {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+}
+
+@media only screen and (max-width: 515px) {
+    .show-img {
+        grid-template-columns: 100%;
+    }
+
+    #price {
+        grid-template-columns: 100%;
+    }
+}
+
+.show-img>img {
+    width: 100%;
+    height: 65%;
+}
+
+#btn1 {
+    background-color: rgb(253, 156, 156);
+    color: black;
+    border: none;
+    padding: 8px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    border: 1px solid black;
+    width: 80%;
+}
+
+#btn1:hover {
+    box-shadow: 4px 4px 4px rgb(194, 190, 190);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+    .main-div>div {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* ---------Appointment form-------- */
+
+.container#blur.active {
+    filter: blur(5px);
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+}
+
+.appointment-form.active {
+    animation: popup 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+}
+
+@keyframes popup {
+    0%{ top: 110%; }
+    30%{ top: 30%; }
+    100%{ top: 47%; }
+}
+
+.appointment-form p {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    width: 91%;
+    margin: 50px auto 0px;
+}
+
+.appointment-form .grid {
+    display: grid;
+    width: 91%;
+    margin: auto;
+    font-family: 'popins' , sans-serif;
+    margin-top: 30px;
+}
+
+.appointment-form .user-profile-form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 60px;
+}
+
+.appointment-form .user-profile-form > div {
+    text-align: left !important;
+}
+
+.appointment-form .user-profile-form input {
+    border: none;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(151, 151, 151);
+    margin-top: 10px;
+    width: 90%;
+}
+
+.appointment-form .user-profile-form input:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(255, 58, 58);
+}
+
+.appointment-form #user-input-Gender {
+    border-bottom: 2px solid rgb(151, 151, 151);
+    width: 91%;
+}
+
+.appointment-form #user-input-Gender input {
+    width: 76%;
+    border-bottom: none;
+}
+
+.appointment-form #user-input-Gender i{
+    font-size: 30px;
+    width: 6%;
+    cursor: pointer;
+    margin: auto;
+    border-right: 2px solid rgb(151, 151, 151);
+}
+
+.appointment-form #transgender-icon {
+    border-right: none !important;
+}
+
+.appointment-form .user-profile-button button {
+    padding: 5px 30px;
+    font-size: 15px;
+    font-family: 'Poppins' , sans-serif;
+    margin: 0px 10px;
+    width: 130px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline;
+}
+
+.appointment-form .save {
+    background-image: linear-gradient(101deg, rgb(247, 69, 48), rgb(255, 46, 115));
+    color: white;
+}
+
+
+/* ----appointment form popup---- */
+
+.appointment-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 60vw;
+    z-index: 100;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+    visibility: hidden;
+}
+
+#appointment-for {
+    border: none;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(151, 151, 151);
+    margin-top: 10px;
+    width: 90%;
+}
+
+#appointment-for:focus {
+    border: none;
+}
+
+#appointment-date {
+    width: 100% !important;
+}

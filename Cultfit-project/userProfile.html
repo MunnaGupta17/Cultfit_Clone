@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://static.cure.fit/assets/images/favicon-modified.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/b169d8feab.js" crossorigin="anonymous"></script>
+    <title>Profile</title>
+    <link rel="stylesheet" href="userProfile.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="nav-bar">
+            <nav>
+                <div class="nav-grid">
+                    <div id="logo">
+                        <a href="Home.html">
+                            <div id="logo-img">
+                                <img src="https://static.cure.fit/assets/images/curefit-v-man.svg" alt="" width="38px">
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <ul id="nav-lists">
+                            <li class="nav-links"><a href="../cultFit-FoodStore/live.html">
+                                    <img src="https://static.cure.fit/assets/images/Livefit.svg" alt="" width="38px">
+                                    <div>
+                                        <p>LIVE</p>
+                                    </div>
+                                </a></li>
+                            <li class="nav-links"><a
+                                    href="home_cult_cultCenters.html">
+                                    <img src="https://static.cure.fit/assets/images/cult-icon.svg" alt="" width="38px">
+                                    <div>
+                                        <p>CULT</p>
+                                    </div>
+                                </a></li>
+                            <li class="nav-links"><a href="mindfull.html">
+                                    <img src="https://static.cure.fit/assets/images/mind-icon.svg" alt="" width="38px">
+                                    <div>
+                                        <p>MIND</p>
+                                    </div>
+                                </a></li>
+                            <li class="nav-links"><a href="../Cultfit-Care/online_consult.html">
+                                    <img src="https://static.cure.fit/assets/images/carefit-blk.svg" alt=""
+                                        width="38px">
+                                    <div>
+                                        <p>CARE</p>
+                                    </div>
+                                </a></li>
+                            <li class="nav-links"><a href="../Cultfit-Store/cultsport.html">
+                                    <img src="https://static.cure.fit/assets/images/store-icon.svg" alt="" width="38px">
+                                    <div>
+                                        <p>STORE</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div id="nav-bar-right">
+                        <div id="nav-bar-right-items">
+                            <div id="login">
+                                <div id="login-logo">
+                                    <a href="#login" onclick="fetchLoginPage()"><img
+                                            src="https://static.cure.fit/assets/images/user-image.svg" alt=""></a>
+                                </div>
+                                <a href="#login" onclick="fetchLoginPage()">
+                                    <div id="login-text">Login</div>
+                                </a>
+                            </div>
+                            <div id="cart">
+                                <a href="#cart" onclick="displayCart()">
+                                    <img src="https://static.cure.fit/assets/images/cart-image.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="main-data">
+            <div id="left-data">
+                <div id="user">
+                    <img src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" alt="" width="80px"
+                        id="profile-picture">
+                    <p id="fetchUserName">Ashok Gupta</p>
+                </div>
+                <div id="user-edits">
+                    <ul>
+                        <li onclick="window.location.href='userProfile.html'">
+                            <div>Profile</div>
+                            <div><i class="fas fa-user"></i></div>
+                        </li>
+                        <li onclick="window.location.href ='userAccount.html'">
+                            <div>Account</div>
+                            <div><i class="fas fa-cog"></i></div>
+                        </li>
+                        <li onclick="window.location.href ='userSupport.html'">
+                            <div>Support</div>
+                            <div><i class="fas fa-headset"></i></div>
+                        </li>
+                        <li>
+                            <div onclick="userLogOut()">Log out</div>
+                            <div><i class="fas fa-sign-out-alt"></i></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!------- User profile ------>
+            <div id="right-data-userProfile">
+                <div id="profile-img-div"><img src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png"
+                        alt="" width="150px" id="profile-picture1"></div>
+                <div id="changeProfilePicture" onclick="updateProfilePicture()">Click to change profile picture</div>
+                <p>PROFILE</p>
+
+                <div class="grid user-profile-form">
+                    <div id="user-input-name">Name<br />
+                        <input type="text" placeholder="Enter your name" id="user-name" readonly>
+                    </div>
+                    <div id="user-input-phone">Phone Number<br />
+                        <input type="text" placeholder="Enter your mobile number" id="user-phone" readonly>
+                    </div>
+                    <div id="user-input-Gender" readonly>Gender<br />
+                        <input type="text" id="user-gender">
+                        <i class="fas fa-male" onclick="changeGender('Male')" id="male-icon"></i>
+                        <i class="fas fa-female" onclick="changeGender('Female')" id="female-icon"></i>
+                        <i class="fas fa-transgender" id="transgender-icon" onclick="changeGender('Other')"></i>
+                    </div>
+                    <div id="user-input-email">Email<br />
+                        <input type="email" placeholder="Enter your email id" id="user-email">
+                    </div>
+                    <div id="user-profile-button">
+                        <button id="discard" onclick="window.location.href = 'userProfile.html'">Discard</button>
+                        <button id="save" onclick="editUser()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    let check = JSON.parse(localStorage.getItem('cultUserName'));
+    if (check != null) {
+        var login = document.getElementById('login-text');
+        login.innerHTML = `${check.name}`;
+
+        var user = document.getElementById('fetchUserName');
+        user.innerHTML = `${check.name}`;
+        
+        user = document.getElementById('user-name');
+        user.value = check.name;
+
+        user = document.getElementById('user-phone');
+        user.value = `+91 ${check.number}`;
+
+        user = document.getElementById('user-gender');
+        if((check.gender) == undefined) {
+            user.value = "Select your gender";
+        }
+        else{
+            user.value = check.gender;
+            changeIconColor(user.value);
+        }
+
+        user = document.getElementById('user-email');
+        user.value = check.email;
+
+        let imgSrc = check.img;
+        if(imgSrc != undefined){
+            let img = document.getElementById('profile-picture');
+            let img1 = document.getElementById('profile-picture1');
+            img.src = imgSrc;
+            img1.src = imgSrc;
+        }
+    }
+
+    function updateProfilePicture() {
+        var imgSrc = prompt(' Enter link for your profile picture ');
+        if(imgSrc == ""){
+            alert('Profile not changed!');
+            return;
+        }
+
+        let data = JSON.parse(localStorage.getItem('cultFitUsers'));
+        let userData = data[check.number];
+        userData.img = imgSrc;
+
+        localStorage.setItem('cultUserName', JSON.stringify(userData));
+
+        data[check.number] = userData;
+        localStorage.setItem('cultFitUsers', JSON.stringify(data));
+
+        window.location.href = "userProfile.html"
+    }
+
+
+    function changeGender(value){
+        let user = document.getElementById('user-gender');
+        user.value = value;
+
+        changeIconColor(value);
+        manageSaveDiscardButton();
+    }
+
+    function changeIconColor(value){
+        var male = document.getElementById('male-icon');
+        var female = document.getElementById('female-icon');
+        var other = document.getElementById('transgender-icon');
+
+        if(value == "Male"){
+            male.style.color = "rgb(255, 46, 115)";
+            female.style.color = "black";
+            other.style.color = "black";
+        }
+        else if(value == "Female"){
+            female.style.color = "rgb(255, 46, 115)";
+            male.style.color = "black";
+            other.style.color = "black";
+        }
+        else {
+            other.style.color = "rgb(255, 46, 115)";
+            female.style.color = "black";
+            male.style.color = "black";
+        }
+    }
+
+
+    function manageSaveDiscardButton() {
+        let btn1 = document.getElementById('discard');
+        let btn2 = document.getElementById('save');
+
+        btn1.style.display = "inline";
+        btn2.style.display = "inline";
+    }
+
+
+    function editUser() {
+        let data = JSON.parse(localStorage.getItem('cultFitUsers'));
+
+        let userData = data[check.number];
+        let gender = document.getElementById('user-gender');
+        if(gender.value != "Select your gender"){
+            userData.gender = gender.value;
+        }
+
+        let email = document.getElementById('user-email');
+        if(email.value != userData.email){
+            userData.email = email.value;
+        }
+
+        localStorage.setItem('cultUserName', JSON.stringify(userData));
+
+        data[check.number] = userData;
+
+        localStorage.setItem('cultFitUsers', JSON.stringify(data));
+
+        window.location.href = "userProfile.html"
+
+    }
+
+    function userLogOut() {
+        let userData = {
+            name: "Login"
+        }
+        localStorage.setItem('cultUserName', JSON.stringify(userData));
+
+        window.location.href = "Home.html";
+    }
+</script>
+
+</html>

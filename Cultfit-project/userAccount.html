@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b169d8feab.js" crossorigin="anonymous"></script>
+    <title>Profile</title>
+    <link rel="icon" href="https://static.cure.fit/assets/images/favicon-modified.png" type="image/x-icon">
+    <link rel="stylesheet" href="userAccount.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="nav-bar">
+            <nav>
+                <div class="nav-grid">
+                    <div id="logo">
+                        <a href="#home">
+                            <div id="logo-img" onclick="window.location.href='Home.html'">
+                                <img src="https://static.cure.fit/assets/images/curefit-v-man.svg" alt="" width="38px">
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <ul id="nav-lists">
+                            <li class="nav-links"><a href="../cultFit-FoodStore/live.html">
+                                    <img src="https://static.cure.fit/assets/images/Livefit.svg" alt="" width="38px">
+                                    <div>
+                                        <p>LIVE</p>
+                                    </div>
+                                </a></li>
+                            <li class="nav-links"><a
+                                    href="home_cult_cultCenters.html">
+                                    <img src="https://static.cure.fit/assets/images/cult-icon.svg" alt="" width="38px">
+                                    <div>
+                                        <p>CULT</p>
+                                    </div>
+                                </a></li>
+                            <li class="nav-links"><a href="mindfull.html">
+                                    <img src="https://static.cure.fit/assets/images/mind-icon.svg" alt="" width="38px">
+                                    <div>
+                                        <p>MIND</p>
+                                    </div>
+                                </a></li>
+                            <li class="nav-links"><a href="../Cultfit-Care/online_consult.html">
+                                    <img src="https://static.cure.fit/assets/images/carefit-blk.svg" alt=""
+                                        width="38px">
+                                    <div>
+                                        <p>CARE</p>
+                                    </div>
+                                </a></li>
+                            <li class="nav-links"><a href="../Cultfit-Store/cultsport.html">
+                                    <img src="https://static.cure.fit/assets/images/store-icon.svg" alt="" width="38px">
+                                    <div>
+                                        <p>STORE</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div id="nav-bar-right">
+                        <div id="nav-bar-right-items">
+                            <div id="login">
+                                <div id="login-logo">
+                                    <a href="#login" onclick="fetchLoginPage()"><img
+                                            src="https://static.cure.fit/assets/images/user-image.svg" alt=""></a>
+                                </div>
+                                <a href="#login" onclick="fetchLoginPage()">
+                                    <div id="login-text">Login</div>
+                                </a>
+                            </div>
+                            <div id="cart">
+                                <a href="#cart" onclick="displayCart()">
+                                    <img src="https://static.cure.fit/assets/images/cart-image.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="main-data">
+            <div id="left-data">
+                <div id="user">
+                    <img src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" alt="" width="80px"
+                        id="profile-picture">
+                    <p id="fetchUserName">Ashok Gupta</p>
+                </div>
+                <div id="user-edits">
+                    <ul>
+                        <li onclick="window.location.href='userProfile.html'">
+                            <div>Profile</div>
+                            <div><i class="fas fa-user"></i></div>
+                        </li>
+                        <li onclick="window.location.href ='userAccount.html'">
+                            <div>Account</div>
+                            <div><i class="fas fa-cog"></i></div>
+                        </li>
+                        <li onclick="window.location.href ='userSupport.html'">
+                            <div>Support</div>
+                            <div><i class="fas fa-headset"></i></div>
+                        </li>
+                        <li>
+                            <div onclick="userLogOut()">Log out</div>
+                            <div><i class="fas fa-sign-out-alt"></i></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!------- User profile ------>
+            <div id="right-data">
+                <p>Change Password</p>
+                <div class="grid user-profile-form">
+                    <div id="user-input-name">Old Password<br/>
+                        <input type="text" placeholder="Enter your Old password" id="old-password">
+                    </div>
+                    <div id="user-input-name">New Password<br/>
+                        <input type="text" placeholder="Enter your Old password" id="new-password">
+                    </div>
+                    <div id="user-input-name">Confirm new Password<br/>
+                        <input type="password" placeholder="Enter your Old password" id="confirm-password">
+                    </div><br>
+                    <div id="user-profile-button">
+                        <button id="discard" onclick="window.location.href = 'userAccount.html'">Discard</button>
+                        <button id="save" onclick="changePassword()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    let check = JSON.parse(localStorage.getItem('cultUserName'));
+    if (check != null) {
+        var login = document.getElementById('login-text');
+        login.innerHTML = `${check.name}`;
+
+        var user = document.getElementById('fetchUserName');
+        user.innerHTML = `${check.name}`;
+
+        let imgSrc = check.img;
+        if(imgSrc != undefined){
+            let img = document.getElementById('profile-picture');
+            img.src = imgSrc;
+        }
+    }
+
+    function userLogOut() {
+        let userData = {
+            name: "Login"
+        }
+        localStorage.setItem('cultUserName', JSON.stringify(userData));
+
+        window.location.href = "Home.html";
+    }
+
+    function changePassword() {
+        let oldPass = document.getElementById('old-password').value;
+        let newPass = document.getElementById('new-password').value;
+        let conNewPass = document.getElementById('confirm-password').value;
+
+        if(oldPass == "" || newPass == "" || conNewPass == ""){
+            alert("Password not changed!");
+            return;
+        }
+
+        if(newPass != conNewPass){
+            alert("New password and confirm password Should be the same!");
+            return;
+        }
+        else if(check.password != oldPass){
+            alert("Old password is wrong!");
+            return;
+        }
+        else{
+            alert("Password changed successfully!");
+        }
+
+        let data = JSON.parse(localStorage.getItem('cultFitUsers'));
+
+        let userData = data[check.number];
+        userData.password = newPass;
+
+        data[check.number] = userData;
+        localStorage.setItem('cultUserName', JSON.stringify(userData));
+        localStorage.setItem('cultFitUsers', JSON.stringify(data));
+
+        userLogOut();
+        // window.location.href = "userAccount.html";
+    }
+</script>
+
+</html>

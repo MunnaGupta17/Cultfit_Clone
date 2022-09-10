@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(224, 224, 224);
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+#container-img {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh2p1at7MwBiVzEpO1n7icNDDtbxdr8l-8Zw&usqp=CAU");
+    background-size: cover;
+    filter: blur(6px);
+    width: 100vw;
+    height: 100vh;
+}
+
+#signUp-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 400px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+    animation: popup 0.4s linear;
+}
+
+@keyframes popup {
+    0% {
+        top: 110%;
+    }
+
+    30% {
+        top: 30%;
+    }
+
+    100% {
+        top: 47%;
+    }
+}
+
+#close-button {
+    max-width: 100%;
+    margin-top: 10px;
+    text-align: right;
+    padding: 10px 15px 0px 0px;
+}
+
+#close-button button {
+    font-size: 15px !important;
+    cursor: pointer;
+    font-weight: 600;
+    background: 0 0;
+    border: 0;
+    color: gray;
+    opacity: 0.5;
+}
+
+#close-button button:hover {
+    opacity: 1;
+}
+
+#login-logo-popup {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#login-logo-popup img {
+    align-self: center;
+}
+
+#logo-name {
+    width: 40% !important;
+}
+
+#logo {
+    width: 15%;
+}
+
+#number::-webkit-outer-spin-button,
+#number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#number {
+    letter-spacing: 5px;
+}
+
+::placeholder {
+    letter-spacing: normal;
+}
+
+.signup-input-field :nth-child(1) {
+    margin-top: 30px
+}
+
+input:focus {
+    outline: none;
+    box-shadow: rgb(55 138 197 / 71%) 0px 0px 16px 0px;
+    border: 2px solid rgb(55, 138, 197);
+}
+
+input {
+    font-size: 20px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    border: 2px solid rgb(111, 105, 170);
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.signup-input-field button {
+    font-size: 20px;
+    padding: 12px;
+    width: 69%;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 30px;
+    color: white;
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(111, 105, 170), rgb(55, 138, 197));
+}
+
+
+.signup-input-field div {
+    text-align: left;
+    width: 61%;
+    margin: auto;
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: outside;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.signup-input-field div span {
+    color: rgb(224, 32, 32);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}

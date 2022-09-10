@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://static.cure.fit/assets/images/favicon-modified.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../manish_cult_fit/cultsport.css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/b169d8feab.js" crossorigin="anonymous"></script>
+    <title>| CULT.FIT Checkout |</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+​
+<body>
+    <div class="logo">
+        <img src="https://static.cure.fit/assets/images/favicon.png" alt="" />
+        <img src="https://api.juspay.in/images/juspay/jp-logo-v3.1.1.png" alt="" />
+    </div>
+    <div id="closePaymentPage"><i onclick="window.location.href ='labtests.html'" class="fas fa-times"></i></div>
+    <div class="main-div">
+        <div class="header">Complete your payment</div>
+        <div class="cart">
+            <p>
+                <i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;&nbsp;</i>Your transaction details
+            </p>
+        </div>
+        <div class="cart-details">
+            <div>
+                <p>Merchant</p>
+                <p>cult.fit</p>
+            </div>
+            <div>
+                <p>Order Id</p>
+                <p id="orderid">Full body checkup</p>
+            </div>
+            <div>
+                <p>Amount</p>
+                <p id="amount">
+                    <i class="fa fa-inr" aria-hidden="true">&nbsp;</i>1499
+                </p>
+            </div>
+        </div>
+        <div class="payment">
+            <p>
+                <i class="fa fa-lock" aria-hidden="true">&nbsp;&nbsp;</i>Payment Options
+            </p>
+        </div>
+        <div class="credit-debit">
+            <div>Credit/Debit Card</div>
+            <div></div>
+        </div>
+        <div class="form">
+            <form action="" id="myform">
+                <div class="div1">
+                    <label for="cardnumber">Card number</label>
+                    <input type="number" name="cardnumber" id="cardnumber" placeholder="Card Number" autofocus />
+                </div>
+                <div class="div1">
+                    <label for="cardname">Name on card</label>
+                    <input type="text" name="cardname" id="cardname" placeholder="Name" />
+                </div>
+                <div class="div2">
+                    <div>
+                        <label for="mm">Expiry (mm/yy)</label>
+                        <div class="ddmmyy">
+                            <input type="text" name="mm" id="mm" placeholder="mm" />
+                            <p id="dateAndTime">/&nbsp;</p>
+                            <input type="text" name="yy" id="yy" placeholder="yyyy" />
+                        </div>
+                    </div>
+                </div>
+                <div class="div3">
+                    <label for="cvv">CVV</label>
+                    <input type="password" name="cvv" id="cvv" placeholder="CVV" />
+                    <img class="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ2TDFHhftJx0y6Y4NYXefN6cY0W0zyCNg00wXvQj-ziI5Mr6LxtJmh9aV42JZEDwMPQ&usqp=CAU" alt="" />
+                </div>
+            </form>
+        </div>
+​
+        <div class="checkbox">
+            <input type="checkbox" name="check" id="check" value="1" />(Save card details for future transactions.)
+        </div>
+        <div class="button">
+            <button>
+          Process &nbsp;<i class="fa fa-inr" aria-hidden="true">&nbsp;</i>1499
+        </button>
+            <p>
+                By clicking 'Process' button, you acknowledge that you have read and agree to the Terms and Conditions.
+            </p>
+        </div>
+    </div>
+</body>
+​
+</html>

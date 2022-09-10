@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cult.fit - health food | fitness | meditation</title>
+    <link rel="icon" href="https://static.cure.fit/assets/images/curefit-v-man.svg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7e153de9b5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="foodhub.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" id="blur">
+        <div id="nav-bar">
+            <nav>
+                <div class="nav-grid">
+                    <div id="logo">
+                        <a href="../Cultfit-project/Home.html">
+                            <div id="logo-img">
+                                <img src="https://static.cure.fit/assets/images/curefit-v-man.svg" alt="" width="38px">
+                            </div>
+                        </a>
+                        <a href="../Cultfit-project/Home.html">
+                            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/image/header-web/live-fit.svg"
+                                alt="">
+                        </a>
+                        <a href="#dropdown">
+                            <img src="https://static.cure.fit/assets/images/arrow-clp.svg" alt="" id="rotateDropDown"
+                                onclick="dropdowneffect(id)">
+                        </a>
+                    </div>
+                    <div id="nav-links">
+                        <ul>
+                            <li><a href="live.html">Fitness</a></li>
+                            <li><a href="mindfulness.html">Mindfulness</a></li>
+                            <li><a href="foodhub.html">Food Hub</a></li>
+                            <!-- <li><a href="#">Cultsport</a></li> -->
+                        </ul>
+                    </div>
+                    <div id="nav-bar-right">
+                        <div id="nav-bar-right-items">
+                            <div id="location" onclick="displayLocation(id)">
+                                <a href="#location">
+                                    <div id="location-circle"></div>
+                                </a>
+                                <a href="#location">
+                                    <div id="change-location-navbar">Hyderabad</div>
+                                </a>
+                            </div>
+                            <div id="login">
+                                <div id="login-logo">
+                                    <a href="#login" onclick="fetchLoginPage()"><img
+                                            src="https://static.cure.fit/assets/images/user-image.svg" alt=""></a>
+                                </div>
+                                <a href="#login" onclick="fetchLoginPage()">
+                                    <div id="login-text">Login</div>
+                                </a>
+                            </div>
+                            <div id="cart">
+                                <a href="#cart" onclick="location.href='cart.html'">
+                                    <img src="https://static.cure.fit/assets/images/cart-image.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- Login page -->
+
+    <div id="login-page">
+        <div id="close-button">
+            <button onclick="window.location.href = '../Cultfit-project/Home.html'"><span>X</span></button>
+        </div>
+        <div id="login-logo-popup">
+            <div><img src="https://static.cure.fit/assets/images/curefit_login_logo.svg" alt=""></div>
+            <img src="https://static.cure.fit/assets/images/cult_name.svg" alt="">
+        </div>
+        <div id="login-input-container">
+            <div id="login-input">Phone Number<br />
+                <input type="number" placeholder="Enter your mobile number" id="login-phone">
+            </div>
+            <div id="login-input">Password<br />
+                <input type="password" placeholder="Enter your Password" id="login-password">
+                <i class="far fa-eye-slash" id="togglePassword" onclick="showHidePassword(id)"></i>
+            </div>
+        </div>
+        <div id="submit-login">
+            <button class="input-login-box" onclick="verifyLogin()">Continue</button>
+        </div>
+        <div class="TnC-check">
+            <div>By Continuing you agree to the
+                <a href="https://static.cult.fit/terms_cult.html" target="_blank">Terms of Services</a>
+                and <a href="https://static.cult.fit/privacy_cult.html" target="_blank">Privacy policy</a>
+            </div>
+        </div>
+        <div>
+            <div id="login-with-gmail" onclick="window.location.href = '../Cultfit-project/Signup.html'">SIGN UP</div>
+        </div>
+    </div>
+
+
+    <!--------------- User Information ---------------->
+
+    <div id="user-info-popup">
+        <div onclick="window.location.href ='../Cultfit-project/userProfile.html'"><i class="fas fa-user"></i> Profile
+        </div>
+        <hr>
+        <div onclick="window.location.href ='../Cultfit-project/userSupport.html'"><i class="fas fa-headset"></i>
+            Support</div>
+        <hr>
+        <div onclick="window.location.href ='../Cultfit-project/userAccount.html'"><i class="fas fa-cog"></i> Account
+        </div>
+        <hr>
+        <div onclick="logout()"><i class="fas fa-sign-out-alt"></i> Log out</div>
+    </div>
+
+    <!-- cart-slde-bar -->
+
+    <div class="Cart-container">
+        <div id="cart-heading-box">
+            <div>Your Cart</div>
+            <div><img src="https://static.cure.fit/assets/images/modal-close.svg" alt="" onclick="hideCart()"></div>
+        </div>
+        <div id="cart-catagories">
+            <ul>
+                <li><a href="#" onclick="underline(id)" id="labtests">lab tests</a></li>
+                <li><a href="#" onclick="underline(id)" id="eatfit">Eatfit</a></li>
+                <li><a href="#" onclick="underline(id)" id="wholefit">Wholefit</a></li>
+                <li><a href="#" onclick="underline(id)" id="cultgear">Cultgear</a></li>
+            </ul>
+        </div>
+        <div id="cart-img">
+            <img id="cart-img-1"
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco/image/home/empty-cart%403x.jpg"
+                alt="">
+        </div>
+        <div id="cart-status">Your cart is empty</div>
+        <div id="cart-description">Looks like you haven't made any purchases yet</div>
+        <div id="cart-back-menu">
+            <a href="#store">
+                <img src="https://static.cure.fit/assets/images/left-arrow-icon-white.svg" alt="">
+                Back to menu
+            </a>
+        </div>
+    </div>
+
+
+
+    <!-- nav-popup-links -->
+
+    <div class="links-container">
+        <div id="dropdown-links">
+            <div id="grid-links">
+                <div>
+                    <a href="live.html">
+                        <img src="https://static.cure.fit/assets/images/Livefit.svg" alt="" width="38px">
+                        <div>
+                            <p>LIVE</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="../Cultfit-project/home_cult_cultCenters.html">
+                        <img src="https://static.cure.fit/assets/images/cult-icon.svg" alt="" width="38px">
+                        <div>
+                            <p>CULT</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="../Cultfit-project/mindfull.html">
+                        <img src="https://static.cure.fit/assets/images/mind-icon.svg" alt="" width="38px">
+                        <div>
+                            <p>MIND</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="../Cultfit-Care/online_consult.html">
+                        <img src="https://static.cure.fit/assets/images/carefit-blk.svg" alt="" width="38px">
+                        <div>
+                            <p>CARE</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="../Cultfit-Store/cultsport.html">
+                        <img src="https://static.cure.fit/assets/images/store-icon.svg" alt="" width="38px">
+                        <div>
+                            <p>STORE</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Location popup bar -->
+
+    <div id="location-popup">
+        <div id="location-popup-heading">Select your Location</div>
+        <div id="location-popup-city">
+            <div id="location-popup-city-header">POPULAR CITY</div>
+            <div id="top-city-locations">
+                <div onclick="locationUpdate(id)" id="Bangalore">
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/blr_new.png"
+                        width="60px" alt="">
+                    <div>Bangalore</div>
+                </div>
+                <div onclick="locationUpdate(id)" id="Delhi NCR">
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/ncr_new.png"
+                        width="60px" alt="">
+                    <div>Delhi NCR</div>
+                </div>
+                <div onclick="locationUpdate(id)" id="Hyderabad">
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/hyd_new.png"
+                        width="60px" alt="">
+                    <div>Hyderabad</div>
+                </div>
+                <div onclick="locationUpdate(id)" id="Mumbai">
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/mumbai_selected.png"
+                        width="60px" alt="">
+                    <div>Mumbai</div>
+                </div>
+            </div>
+            <div id="location-popup-city-header">OTHER CITY</div>
+            <div>
+                <ul>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Chennai">Chennai</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Visakhapatnam">Visakhapatnam</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Jaipur">Jaipur</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Vadodara">Vadodara</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Pune">Pune</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Kolkata">Kolkata</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Ahmedabad">Ahmedabad</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Mysore">Mysore</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Chandigarh Tricity">Chandigarh Tricity</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Kota">Kota</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Kochi">Kochi</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Ludhiana">Ludhiana</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Surat">Surat</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Jammu">Jammu</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Amritsar">Amritsar</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Indore">Indore</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Coimbatore">Coimbatore</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Manglore">Manglore</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Bhopal">Bhopal</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Nagpur">Nagpur</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Kanpur">Kanpur</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Agra">Agra</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Lucknow">Lucknow</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Other">Other</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- nav end  -->
+
+    <!-- nav end  -->
+    <!-- Healthy Recipe Collections -->
+    <div class="Healthy-Recipes">
+        <h2>Healthy Recipe Collections</h2>
+        <div class="Healthy-Recipes-display" id="h-r-d">
+            <div>
+                <div
+                    style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/recipeCollection/prod/BAKED_SNACKS_RECIPES/160X200_baked_snacks.png);">
+                </div>
+                <div>
+                    <p>6 Recipes</p>
+                </div>
+            </div>
+            <div>
+                <div
+                    style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/recipeCollection/prod/EASY_DESSERT_RECIPES/Dessert_160X200.png);">
+                </div>
+                <div>
+                    <p>6 Recipes</p>
+                </div>
+            </div>
+            <div>
+                <div
+                    style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/recipeCollection/prod/KHICHDI_RECIPES/Khichdi_160X200.png);">
+                </div>
+                <div>
+                    <p>6 Recipes</p>
+                </div>
+            </div>
+            <div>
+                <div
+                    style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/recipeCollection/prod/WEIGHT_WISE_RECIPES/Weight-loss_160X200.png);">
+                </div>
+                <div>
+                    <p>6 Recipes</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Healthy Recipe Collections end -->
+    <!-- showData -->
+    <div class="Recipes">
+        <h2>Try some healthy food from outside</h2>
+        <div class="view-diss" id="viewpart">
+
+
+        </div>
+    </div>
+    <!-- showdata -->
+    <!-- Cookery Shows -->
+    <div class="Cookery-Shows-part">
+        <h2>Cookin Show</h2>
+        <div class="Cookery-Shows">
+
+            <div>
+                <div
+                    style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_219,ar_1,fl_progressive,f_auto,q_auto:eco/dpr_2/image/onDemandVideoCollection/production/E_SK/1_mag.jpg);">
+                </div>
+                <div>
+                    <p>5 Episodes</p>
+                </div>
+            </div>
+            <div>
+                <div
+                    style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_219,ar_1,fl_progressive,f_auto,q_auto:eco/dpr_2/image/onDemandVideoCollection/production/E_SFOS/4_mag.jpg);">
+                </div>
+                <div>
+                    <p>Episodes</p>
+                </div>
+            </div>
+            <div>
+                <div
+                    style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_219,ar_1,fl_progressive,f_auto,q_auto:eco/dpr_2/image/onDemandVideoCollection/production/E_MM/3_mag.jpg);">
+                </div>
+                <div>
+                    <p>5 Episodes</p>
+                </div>
+            </div>
+            <div>
+                <div
+                    style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_219,ar_1,fl_progressive,f_auto,q_auto:eco/dpr_2/image/onDemandVideoCollection/production/E_WC/1_mag.jpg);">
+                </div>
+                <div>
+                    <p>6 Episodes</p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Cookery Shows end -->
+
+    <div class="ditels">
+        <div>
+            <h2>Exercises</h2>
+            <p>Exercise enhances or maintains the overall wellness of the body. It supports physical fitness and health.
+                People perform
+                home exercise to improve strength, develop muscles, lose weight, aid growth, and prevent ageing. One
+                should always keep
+                in mind that spending some time on daily fitness is better than not doing anything.</p>
+        </div>
+        <div>
+            <h2>What does Fitness Mean?</h2>
+            <p>Fitness is a form of good health of the body where an individual is physically and mentally fit. The main
+                objective of
+                fitness is to provide ample energy with less fatigue and the resilience to efficiently perform tasks in
+                our regular
+                routines.</p>
+        </div>
+        <div>
+            <h2>What is Exercise/Workout?</h2>
+            <p>Physical exercise burns calories and helps in maintaining weight or prevents weight gain. Home exercise
+                is essential to
+                everybody right from when they are small as they develop motor skills and help with their performance
+                later in life. It
+                allows an individual to perform well in sports later and in other activities that include physical
+                fitness. Performing
+                exercise regularly helps people develop good mental health to fight depression and have a positive
+                outlook. Workout acts
+                as a most excellent stress reliever to fight the numerous problems in our daily lives. Home exercise
+                will help a person
+                handle his/her daily chores with more energy as it improves both heart and lung health. Workout delivers
+                oxygen to all
+                the tissues and provides nutrients to all parts of the body. Home workout boosts the endurance levels in
+                the body.
+                Workout promotes better and in-depth sleep. Hence people who have sleep issues should start prioritizing
+                fitness and
+                exercises. Home workout reasonably lifts the emotions and makes us feel brisk throughout the day. This
+                is because they
+                stimulate brain chemicals and make the person feel happy, relaxed, and less anxious. Fitness helps boost
+                confidence and
+                increases a person's self-esteem as it changes the appearance of skin, mind, and body. Home exercise
+                ignites and puts
+                the spark back in a person's sex life as it is a key to treat erectile dysfunction in men. Pregnant
+                women benefit a lot
+                from the home workout as it increases body flexibility and helps them handle</p>
+        </div>
+        <div>
+            <h2>Why is Exercise Important?</h2>
+            <p>Physical exercise burns calories and helps in maintaining weight or prevents weight gain. Home exercise
+                is essential to
+                everybody right from when they are small as they develop motor skills and help with their performance
+                later in life. It
+                allows an individual to perform well in sports later and in other activities that include physical
+                fitness. Performing
+                exercise regularly helps people develop good mental health to fight depression and have a positive
+                outlook. Workout acts
+                as a most excellent stress reliever to fight the numerous problems in our daily lives. Home exercise
+                will help a person
+                handle his/her daily chores with more energy as it improves both heart and lung health. Workout delivers
+                oxygen to all
+                the tissues and provides nutrients to all parts of the body. Home workout boosts the endurance levels in
+                the body.
+                Workout promotes better and in-depth sleep. Hence people who have sleep issues should start prioritizing
+                fitness and
+                exercises. Home workout reasonably lifts the emotions and makes us feel brisk throughout the day. This
+                is because they
+                stimulate brain chemicals and make the person feel happy, relaxed, and less anxious. Fitness helps boost
+                confidence and
+                increases a person's self-esteem as it changes the appearance of skin, mind, and body. Home exercise
+                ignites and puts
+                the spark back in a person's sex life as it is a key to treat erectile dysfunction in men. Pregnant
+                women benefit a lot
+                from the home workout as it increases body flexibility and helps them handle</p>
+        </div>
+        <div>
+            <h2>What are the Different Types of Exercise?</h2>
+            <p>There are a great many exercises to adhere to in our daily routines. They have to be picked up after
+                analyzing and
+                determining the purpose of it. The primary reason to select the kinds of exercise is to improve the
+                ability and reduce
+                boredom and the risk of injury. Because when the same pattern is followed day after day, any individual
+                will lose
+                enthusiasm and get fed up with the monotonous workout schedules. In that manner, exercises can be
+                considerably
+                categorized by the following four components: Endurance: This is to sustain any exercise for an extended
+                period. This is
+                further classified into cardiovascular and muscular endurance. Cardiovascular endurance fuels up the
+                body with oxygen by
+                increasing the ability of the heart and lungs. In contrast, muscular endurance builds up the muscles'
+                capacity and
+                permits the system to workout continuously without fatigue. Strength: Strength in fitness is to work
+                against resistance,
+                and it is merely the maximum force that a muscle can exert against a load. This is efficiently brought
+                into effect by
+                training the body to lift weights. These exercises increase muscle mass, increase bone strength and
+                flexibility of
+                joints. Balance: This is to hold the body coordinated and control its movement and position. Balance is
+                a vital point of
+                fitness. It is achieved by having the same position for a long time by adding movement to various poses
+                comfortably.
+                Flexibility: Flexibility defines the muscle and connective tissues' motion and to what extent or range
+                they can stretch.
+                Doing these exercises will help the body to prevent balance problems, injuries, and other pains linked
+                with joints.
+            </p>
+        </div>
+        <div>
+            <h2>10 Exercises to be Fit in your Day to Day Life</h2>
+            <p>There are a great many exercises to adhere to in our daily routines. They have to be picked up after
+                analyzing and
+                determining the purpose of it. The primary reason to select the kinds of exercise is to improve the
+                ability and reduce
+                boredom and the risk of injury. Because when the same pattern is followed day after day, any individual
+                will lose
+                enthusiasm and get fed up with the monotonous workout schedules. In that manner, exercises can be
+                considerably
+                categorized by the following four components: Endurance: This is to sustain any exercise for an extended
+                period. This is
+                further classified into cardiovascular and muscular endurance. Cardiovascular endurance fuels up the
+                body with oxygen by
+                increasing the ability of the heart and lungs. In contrast, muscular endurance builds up the muscles'
+                capacity and
+                permits the system to workout continuously without fatigue. Strength: Strength in fitness is to work
+                against resistance,
+                and it is merely the maximum force that a muscle can exert against a load. This is efficiently brought
+                into effect by
+                training the body to lift weights. These exercises increase muscle mass, increase bone strength and
+                flexibility of
+                joints. Balance: This is to hold the body coordinated and control its movement and position. Balance is
+                a vital point of
+                fitness. It is achieved by having the same position for a long time by adding movement to various poses
+                comfortably.
+                Flexibility: Flexibility defines the muscle and connective tissues' motion and to what extent or range
+                they can stretch.
+                Doing these exercises will help the body to prevent balance problems, injuries, and other pains linked
+                with joints.</p>
+        </div>
+        <div>
+            <h2>10 Exercises to be Fit in your Day to Day Life</h2>
+            <p>The most common and widely practised 10 best exercises which help to rock the human body are:</p>
+        </div>
+
+    </div>
+    <!-- <div>
+            <div class="divv"></div>
+        </div> -->
+    <!-- Footer -->
+
+    <div id="footer">
+        <div id="footer-container">
+            <div id="footer-part-1">
+                <div id="footer-details">
+                    <div><img src="https://static.cure.fit/assets/images/cult-logo-white.svg" alt="" width="126"
+                            height="42"></div>
+                    <div class="description">
+                        At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy
+                        with yoga & meditation, and medical & lifestyle care hassle-free. #BeBetterEveryDay
+                    </div>
+                </div>
+
+                <ul>
+                    <li><a href="#" target="_blank">CONTACT US</a></li>
+                    <li><a href="#" target="_blank">BLOG</a></li>
+                    <li><a href="#" target="_blank">PARTNER.FIT</a></li>
+                    <li><a href="#" target="_blank">TALKS</a></li>
+                    <li><a href="#" target="_blank">CAREERS</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#" target="_blank">CULTFIT FOR BUSINESSES</a></li>
+                    <li><a href="#" target="_blank">CULT FRANCHISE</a></li>
+                    <li><a href="#" target="_blank">CULT PASS NETWORK</a></li>
+                    <li><a href="#" target="_blank">CORPORATE PARTNERSHIPS</a></li>
+                </ul>
+
+                <ul>
+                    <li class="footer-app-information"><img src="https://static.cure.fit/assets/images/app-store.svg"
+                            alt="" width="80%" onclick="applestore()"></li>
+                    <li class="footer-app-information"><img src="https://static.cure.fit/assets/images/play-store.svg"
+                            alt="" width="80%" onclick="playsotre()"></li>
+                </ul>
+            </div>
+
+            <div id="important-links">
+                <div>RELATED SEARCHES</div>
+                <hr color="#A2A2A2">
+                <div id="important-links-list">
+                    <ul>
+                        <li><a href="#">Gym Near Me</a></li>
+                        <li><a href="#">Consult Nutritionist Online</a></li>
+                        <li><a href="#">Chest Exercises at Home</a></li>
+                        <li><a href="#">Stress Management</a></li>
+                        <li><a href="#">Mindfulness Meditation</a></li>
+                        <li><a href="#">Gyms in Mumbai</a></li>
+                        <li><a href="#">Gyms in Kolkata</a></li>
+                        <li><a href="#">Home Workouts</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Online Personal Training</a></li>
+                        <li><a href="#">Consult Gynecologist Online</a></li>
+                        <li><a href="#">Fat Burning Exercises</a></li>
+                        <li><a href="#">Yoga Asanas</a></li>
+                        <li><a href="#">Yoga Nidra</a></li>
+                        <li><a href="#">Gyms in Delhi</a></li>
+                        <li><a href="#">Gyms in Ahmedabad</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Online Doctor Consultation</a></li>
+                        <li><a href="#">Diagnostic tests</a></li>
+                        <li><a href="#">Six Pack Workout</a></li>
+                        <li><a href="#">Meditation Music</a></li>
+                        <li><a href="#">Dermatologist online</a></li>
+                        <li><a href="#">Gyms in Pune</a></li>
+                        <li><a href="#">Gyms in Chandigarh</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Therapist consultation</a></li>
+                        <li><a href="#">Food Near Me</a></li>
+                        <li><a href="#">Yoga Postures for Beginners</a></li>
+                        <li><a href="#">Pranayama</a></li>
+                        <li><a href="#">Othopedist doctor near me</a></li>
+                        <li><a href="#">Gyms in Hydrabad</a></li>
+                        <li><a href="#">Gyms in Indore</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Online Fitness Classes</a></li>
+                        <li><a href="#">Healthy Recipes</a></li>
+                        <li><a href="#">Surya Namaskar for Beginners</a></li>
+                        <li><a href="#">Bedtime Stories for Kids</a></li>
+                        <li><a href="#">Manchow Soup</a></li>
+                        <li><a href="#">Gyms in Chennai</a></li>
+                        <li><a href="#">Gyms in Coimbatore</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Consult Cardiologist Online</a></li>
+                        <li><a href="#">Reduce Belly Fat</a></li>
+                        <li><a href="#">Yoga for Stress Relief</a></li>
+                        <li><a href="#">Meditation in Hindi</a></li>
+                        <li><a href="#">Badam Milk</a></li>
+                        <li><a href="#">Gyms in Jaipur</a></li>
+                        <li><a href="#">Gyms in Bangalore</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div id="contact-links">
+                    <div><a href="#">Contact us</a></div>
+                    <div><a href="#">FAQ</a></div>
+                    <div><a href="#">Terms and Condition</a></div>
+                    <div><a href="#">Privacy Policy</a></div>
+                    <div><a href="#">Refund Policy</a></div>
+                </div>
+                <div id="icons">
+                    <a href="https://www.youtube.com/channel/UCSE72IaHOL-1Tv-m3JHE4Cg" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/cultfitOfficial/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/cultfitOfficial" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/BeCureFit/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- <script src="Script.js"></script> -->
+<!-- <script sr></script> -->
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+
+
+    let fooddata = document.getElementById("viewpart")
+    let localFoodData = [
+        {
+            description: "Banaras is a food lover’s paradise as it is home to a number of delicious dishes. This place is famous all over the country for its food and the recipe that we have for you too has its roots in Banaras. If this dish had to be described in just a sentence, it would be something on the lines of fried baby potatoes submerged in a thick, rich tomato gravy but that wouldn’t do justice as the deliciousn",
+            id: 6,
+            image: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/a3ee50d2-8281-4cc6-9efc-f460054d4262",
+            name: "Banarasi Dum Aloo",
+            price: "780",
+            rating: "5",
+            time: "00:35"
+        },
+        {
+            description: "A simple and flavourful side dish loved across India - Bharwa Bhindi, stuffed okra or ladies’ finger is comfort food. Pair it with hot fluffy tawa phulkas, wheat flour parathas or serve it with kadhi chawal as a side dish. The dry sabzi is relished across the country with each home having its own variation and twist to the dish. Loved by children and adults alike, ",
+            id: 0,
+            image: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/d006b4e3-ad79-4cee-85df-b0b6235591d7",
+            name: "Bharwa Bhindi",
+            price: "480",
+            rating: "5",
+            time: "00:20"
+        },
+        {
+            description: "Generally, non-vegetarian food is loaded with too many calories. But if you know the correct way and portion of vegetables and poultry products to include, it can work wonders. So, here we bring to you a bowl full of nutrition and will work magically on your palette. It is called the egg ramen bowl. It looks cute, contains well-managed portions and there is no compromise on taste! You can have you",
+            id: 1,
+            image: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/ee056697-5793-43c0-9ec9-c30d7bd086fd",
+            name: "Egg Ramen Bowl",
+            price: "250",
+            rating: "4.9",
+            time: "00:30"
+        },
+        {
+            description: "Be it brunch, lunch, or dinner; Veg Hakka noodles are a hot favorite at the dining table. The vibrant colours of the vegetables and the silky soft noodles coated with a light sauce and spicier than the regular noodles making this dish irresistible. With Veg Hakka noodles calories around 500 and a meal by itself, it is far healthier than its non-veg counterparts like chicken or shrimp or beef Hakka ... ",
+            id: 2,
+            image: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/b4deb130-5a33-41ee-91dc-a039c76fdc24",
+            name: "Veg Hakka Noodles",
+            price: "220",
+            rating: "4.8",
+            time: "00:25"
+        },
+        {
+            description: "Did you know that a South Indian breakfast is considered to be one of the healthiest in the whole world? This delicious rawa idli recipe is a part of South Indian cuisine and lends a tasty twist to the classic rice and lentil cakes. Combining the goodness of pulses, granulated wheat, and spices, rawa idli has gained popularity from the tiffin centres of Karnataka as this instant recipe bypasses th ... ",
+            id: 3,
+            image: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/f36ce169-811e-4ac2-ae97-f6a44edf8990",
+            name: "Rawa Idli",
+            price: "380",
+            rating: "5",
+            time: "00:35"
+        },
+        {
+            description: "A delicious starter is always a lovely way to begin a family lunch or dinner. There is no better way to start a meal than with a delicacy like a plate full of tempting Chilli Baby Corn in front that is too good to resist. The ingredients for preparing this Chilli Baby Corn are many but are easily available at home or in the nearby market. A plain Chilli Baby Corn description is that it is a popula ",
+            id: 4,
+            image: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/5f15068e-eed1-4a7d-b8fa-8df3b8e438c0",
+            name: "Chilli Baby Corn",
+            price: "270",
+            rating: "4.8",
+            time: "00:30"
+        },
+        {
+            description: "If you grew up in the 80s and 90s in India, you'd find that cuisines were not that varied like how it is today. Indian restaurants were popular and served Malai Kofta on menus a lot. The Kofta falls under the family of Lebanon meatballs and actually originates from the Indian subcontinent. Malai Kofta is a vegetarian version of those meatballs and made by deep-frying a blend of paneer and mashed p ... ",
+            id: 5,
+            image: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/c5ebb267-04f6-4302-b6c3-efe0f916d9b3",
+            name: "Malai Kofta",
+            price: "580",
+            rating: "5",
+            time: "00:45"
+        },
+        {
+            description: "Gatte Ki Sabzi hails from Rajasthani cuisine where chickpea dumplings are dunked in a spicy and tangy yogurt-based gravy. Gram flour is used to make the coating for the dumplings and the dish is served mostly during big events, family gatherings, and wedding parties. Gatte Ki Sabzi is best served with parathas and rotis. For those days when you don't have a lot of vegetables lying around the house ... ",
+            id: 6,
+            image: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/bd1bf9fe-c233-43db-a5a4-cb2f08c0408a",
+            name: "Gatte ki Sabzi",
+            price: "420",
+            rating: "4.9",
+            time: "00:45"
+        },
+        {
+            description: "This is one lip-smacking dish that is sure to take you down through the memory lane. It is amazingly easy and quick to make a vegetarian recipe. Served with sweet-spicy chutney, matar kulcha taste all the more delectable. White peas are used to make this dish. It is full of taste and flavor that seems to be bursting in the mouth. It is an extremely versatile dish and is paired with Kulcha, a leave ",
+            id: 7,
+            image: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/5715a831-0aba-4cca-bcfb-d225ebf94a3d",
+            name: "Matar Kulcha",
+            price: "650",
+            rating: "5",
+            time: "00:50"
+        },
+        {
+            description: "Healthy Chicken Manchow Soup is an Indo-Chinese soup served famously in Indian streets. It falls under the category of thick soup which uses corn flour as a thickening agent. An all-time favorite it is an excellent starter for any meal. The sharp flavors of ginger and garlic blend beautifully with the tangy flavor of soya sauce in this soup. A hot pot of Healthy Chicken Manchow Soup is not just a  ... ",
+            id: 8,
+            image: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/61293418-0431-49a5-a63a-451bc2a41ad3",
+            name: "Healthy Chicken Manchow Soup",
+            price: "95",
+            rating: "5",
+            time: "00:10"
+        },
+        {
+            description: "A famous Maharashtrian recipe, Misal Pav is a delectable cocktail of sprouts, tangy gravy and savouries. Nutritious, healthy and wholesome it is a combination of tasty sprouts cooked in tangy tomatoes and pungent onions gravy. What adds to the flavour is the addition of spice powders and the coconut and onion based misal masala. This is further enhanced with the addition of chivda, potatoes and ot ... ",
+            id: 9,
+            image: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/86d82875-224c-4495-a1fb-47072aad5aef",
+            name: "Misal, Pav",
+            price: "75,",
+            rating: "4,.8",
+            time: "00:30"
+        },
+        {
+            description: "You must already be familiar with this dish that we have for you as it is one of the most popular Spinach dishes that is made from time to time in households all over India and even some other Southeast Asian countries. This Aloo Palak Ki Sabzi recipe that we have is pretty similar to the traditional recipe but with a few tweaks to make it as healthy as possible without compromising on  taste so t ... ",
+            id: 11,
+            image: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,ar_0.8,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/68d5b7a7-05dc-48c1-9516-5e90d50062a8",
+            name: "Aloo Palak ki Sabzi",
+            price: "750",
+            rating: "5",
+            time: "00:25"
+        }
+    ];
+
+    let showdata = JSON.parse(localStorage.getItem("fooddata"));
+    if(showdata == null){
+        localStorage.setItem('fooddata', JSON.stringify(localFoodData));
+        showdata = localFoodData;
+    }
+
+    let par = document.getElementById("viewpart")
+    if (showdata != null) {
+        showdata.forEach(element => {
+            let cdiv = document.createElement('div')
+            cdiv.setAttribute('class', "foodbox")
+
+            let image = document.createElement('div')
+            image.style.backgroundImage = `url("${element.image}")`
+            image.setAttribute("class", "foodimg")
+            // image.src = element.image
+            let ditels = document.createElement('div')
+            ditels.setAttribute("class", "ditels")
+
+            let price = document.createElement('div')
+            price.innerHTML = `&nbspPrice <i class="fas fa-rupee-sign"></i>${element.price} `
+
+            let rating = document.createElement('div')
+            rating.innerHTML = `Rating  ${element.rating}<i class="fas fa-star"></i>`
+
+            let time = document.createElement('div')
+            time.innerHTML = `<i class="far fa-clock"></i> ${element.time} min`
+            time.setAttribute("claaa", "time")
+
+
+            let adcartbtn = document.createElement('button')
+            adcartbtn.innerHTML = "Add To cart"
+            adcartbtn.onclick = function () {
+                adincart(element);
+            }
+            ditels.append(price, rating, time, adcartbtn)
+            cdiv.append(image, ditels)
+
+            par.append(cdiv)
+
+
+        });
+    }
+
+    function adincart(el) {
+
+        let ar = localStorage.getItem('cartfood')
+        if (ar == null) {
+            ar = []
+        } else {
+            ar = JSON.parse(ar)
+        }
+        let alradyadd = false
+        for (let k = 0; k < ar.length; k++) {
+            if (ar[k].id == el.id) {
+                ar[k].qty = ar[k].qty + 1;
+                alert("Item alrady added please visit cart")
+                alradyadd = true;
+                break
+            }
+
+        }
+        if (!alradyadd) {
+            el.qty = 1;
+            ar.push(el);
+            alert(`${el.name} added in cart sucessfully`)
+        }
+
+
+        localStorage.setItem('cartfood', JSON.stringify(ar));
+
+    }
+
+    var rotateDropDown = -180;
+    function dropdowneffect(x) {
+        var img = document.getElementById(x);
+        img.style.transform = `rotate(${rotateDropDown}deg)`;
+        var dropdown = document.getElementById('dropdown-links');
+        if (rotateDropDown == -180) {
+            rotateDropDown = 0;
+            dropdown.style.display = "inline";
+        }
+        else {
+            rotateDropDown = -180;
+            dropdown.style.display = "none";
+        }
+    }
+
+
+
+    // ---------Log in---------- \\ 
+
+    let clickCount = 0;
+
+    function fetchLoginPage() {
+        clickCount++;
+        if (clickCount % 2 == 0) {
+            let x = document.getElementById('user-info-popup');
+            x.style.display = "none";
+            return;
+        }
+        var login = document.getElementById('login-text');
+        if (login.innerHTML != "Login") {
+            let x = document.getElementById('user-info-popup');
+            x.style.display = "inherit";
+            return;
+        }
+
+        var blur = document.getElementById('blur');
+        blur.classList.toggle('active');
+
+        var popup = document.getElementById('login-page');
+        popup.classList.toggle('active');
+    }
+
+    function logout() {
+        let currentUser = {
+            name: "Login"
+        }
+
+        localStorage.setItem('cultUserName', JSON.stringify(currentUser));
+        window.location.href = "foodHub.html";
+    }
+
+    function displayCart() {
+        var cart = document.querySelector('.Cart-container');
+        cart.style.display = "inherit";
+    }
+
+    function hideCart() {
+        var cart = document.querySelector('.Cart-container');
+        cart.style.display = "none";
+    }
+
+    function verifyLogin() {
+
+        let phone = document.getElementById('login-phone').value;
+        let password = document.getElementById('login-password').value;
+
+        let data = JSON.parse(localStorage.getItem('cultFitUsers'));
+
+        if (data == null) {
+            alert("Invalid Credentials!");
+            return;
+        }
+
+        if (data[phone] == undefined) {
+            alert("Invalid Credentials!");
+        }
+        else {
+            if (data[phone].password == password) {
+                var login = document.getElementById('login-text');
+
+                if (login.innerHTML == "Login") {
+                    let currentUser = data[phone];
+
+                    localStorage.setItem('cultUserName', JSON.stringify(currentUser));
+                }
+                else {
+                    alert("User already logged in");
+                }
+                window.location.href = "foodhub.html";
+            }
+            else {
+                alert("Invalid Credentials!");
+            }
+        }
+
+    }
+
+
+    let check = JSON.parse(localStorage.getItem('cultUserName'));
+    if (check != null) {
+        var login = document.getElementById('login-text');
+        login.innerHTML = `${check.name}`;
+    }
+
+    function showHidePassword(id) {
+        let input = document.getElementById('login-password');
+        let passwordType = document.getElementById(id);
+        if (input.type == 'password') {
+            input.type = "text";
+            passwordType.removeAttribute('class');
+            passwordType.setAttribute('class', 'far fa-eye');
+        }
+        else {
+            input.type = 'password';
+            passwordType.removeAttribute('class');
+            passwordType.setAttribute('class', 'far fa-eye-slash');
+        }
+    }
+
+
+
+
+    //------------- Cart js ----------\\
+    function displayCart() {
+        // var cart = document.querySelector('.Cart-container');
+        // cart.style.display = "inherit";
+        window.location.href = "cart.html"
+    }
+
+    function hideCart() {
+        var cart = document.querySelector('.Cart-container');
+        cart.style.display = "none";
+    }
+
+
+
+    // ----------- cart js --------- \\
+    var borderBottomAchor = document.getElementById('eatfit');
+    function underline(x) {
+        var a = document.getElementById(x);
+        borderBottomAchor.style.borderBottom = "none";
+        borderBottomAchor.style.fontWeight = "500";
+
+        borderBottomAchor = a;
+        borderBottomAchor.style.fontWeight = "bolder";
+        a.style.borderBottom = "2px solid rgb(255, 50, 120)";
+
+        var cartImg = document.getElementById('cart-img-1');
+        var cartDes = document.getElementById('cart-description');
+
+        if (x == "cultgear") {
+            cartImg.style.display = "none";
+            cartDes.style.display = "none";
+        }
+        else {
+            cartImg.style.display = "inherit";
+            cartDes.style.display = "inherit";
+        }
+    }
+
+
+    // ----------- location pop up ------------\\
+
+    function locationUpdate(x) {
+        var a = document.getElementById('location-popup');
+        a.style.display = "none";
+
+        var b = document.getElementById('change-location-navbar');
+        b.innerText = x;
+    }
+
+    function displayLocation(x) {
+        var a = document.getElementById('location-popup');
+        a.style.display = "flex";
+    }
+
+</script>

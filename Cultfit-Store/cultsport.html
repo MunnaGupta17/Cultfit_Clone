@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://static.cure.fit/assets/images/favicon-modified.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="cultsport.css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/b169d8feab.js" crossorigin="anonymous"></script>
+    <title>
+        Buy Sportswear Online - Up to 60% Off on Sportswear & Shoes | Cult Gear
+    </title>
+</head>
+
+<body>
+    <div class="container" id="blur">
+        <div id="nav-bar">
+            <nav>
+                <div class="nav-grid">
+                    <div id="logo">
+                        <a href="../Cultfit-project/Home.html">
+                            <div id="logo-img">
+                                <img src="https://static.cure.fit/assets/images/curefit-v-man.svg" alt="" width="38px" />
+                            </div>
+                        </a>
+                        <a href="#">
+                            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/image/header-web/store_fit.svg" alt="" />
+                        </a>
+                        <a href="#dropdown">
+                            <img src="https://static.cure.fit/assets/images/arrow-clp.svg" alt="" id="rotateDropDown" onclick="dropdowneffect(id)" />
+                        </a>
+                    </div>
+                    <div id="nav-links">
+                        <ul>
+                            <li><a href="#">cultsport</a></li>
+                        </ul>
+                    </div>
+                    <div id="nav-bar-right">
+                        <div id="nav-bar-right-items">
+                            <div id="location" onclick="displayLocation(id)">
+                                <a href="#location">
+                                    <div id="location-circle"></div>
+                                </a>
+                                <a href="#location">
+                                    <div id="change-location-navbar">Hyderabad</div>
+                                </a>
+                            </div>
+                            <div id="login">
+                                <div id="login-logo">
+                                    <a href="#login" onclick="fetchLoginPage()"><img src="https://static.cure.fit/assets/images/user-image.svg" alt="" /></a>
+                                </div>
+                                <a href="#login" onclick="fetchLoginPage()">
+                                    <div id="login-text">Login</div>
+                                </a>
+                            </div>
+                            <div id="cart">
+                                <a href="cartPage.html">
+                                    <img src="https://static.cure.fit/assets/images/cart-image.svg" alt="" />
+                                    <span id="badge" style="
+                        color: #f37597;
+                        font-size: 14px;
+                        top: 4px;
+                        right: 25px;
+                        position: absolute;
+                      "></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- login-page -->
+
+    <div id="login-page">
+        <div id="close-button">
+            <button onclick="window.location.href = 'cultsport.html'">
+          <span>X</span>
+        </button>
+        </div>
+        <div id="login-logo-popup">
+            <div>
+                <img src="https://static.cure.fit/assets/images/curefit_login_logo.svg" alt="" />
+            </div>
+            <img src="https://static.cure.fit/assets/images/cult_name.svg" alt="" />
+        </div>
+        <div id="login-input-container">
+            <div id="login-input">
+                Phone Number<br />
+                <input type="number" placeholder="Enter your mobile number" id="login-phone" />
+            </div>
+            <div id="login-input">
+                Password<br />
+                <input type="password" placeholder="Enter your Password" id="login-password" />
+                <i class="far fa-eye-slash" id="togglePassword" onclick="showHidePassword(id)"></i>
+            </div>
+        </div>
+        <div id="submit-login">
+            <button class="input-login-box" onclick="verifyLogin()">
+          Continue
+        </button>
+        </div>
+        <div class="TnC-check">
+            <div>
+                By Continuing you agree to the
+                <a href="https://static.cult.fit/terms_cult.html" target="_blank">Terms of Services</a
+          >
+          and
+          <a href="https://static.cult.fit/privacy_cult.html" target="_blank"
+            >Privacy policy</a
+          >
+        </div>
+      </div>
+      <div>
+        <div
+          id="login-with-gmail"
+          onclick="window.location.href = '../Cultfit-project/Signup.html'"
+        >
+          SIGN UP
+        </div>
+      </div>
+    </div>
+
+    <!-- cart-slde-bar -->
+
+    <div class="Cart-container">
+      <div id="cart-heading-box">
+        <div>Your Cart</div>
+        <div>
+          <img
+            src="https://static.cure.fit/assets/images/modal-close.svg"
+            alt=""
+            onclick="hideCart()"
+          />
+        </div>
+      </div>
+      <div id="cart-catagories">
+        <ul>
+          <li>
+            <a href="#" onclick="underline(id)" id="labtests">lab tests</a>
+                </li>
+                <li><a href="#" onclick="underline(id)" id="eatfit">Eatfit</a></li>
+                <li>
+                    <a href="#" onclick="underline(id)" id="wholefit">Wholefit</a>
+                </li>
+                <li>
+                    <a href="#" onclick="underline(id)" id="cultgear">Cultgear</a>
+                </li>
+                </ul>
+            </div>
+            <div id="cart-img">
+                <img id="cart-img-1" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco/image/home/empty-cart%403x.jpg" alt="" />
+            </div>
+            <div id="cart-status">Your cart is empty</div>
+            <div id="cart-description">
+                Looks like you haven't made any purchases yet
+            </div>
+            <div id="cart-back-menu">
+                <a href="#store">
+                    <img src="https://static.cure.fit/assets/images/left-arrow-icon-white.svg" alt="" /> Back to menu
+                </a>
+            </div>
+        </div>
+
+        <!-- Location popup bar -->
+
+        <div id="location-popup">
+            <div id="location-popup-heading">Select your Location</div>
+            <div id="location-popup-city">
+                <div id="location-popup-city-header">POPULAR CITY</div>
+                <div id="top-city-locations">
+                    <div onclick="locationUpdate(id)" id="Bangalore">
+                        <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/blr_new.png" width="60px" alt="" />
+                        <div>Bangalore</div>
+                    </div>
+                    <div onclick="locationUpdate(id)" id="Delhi NCR">
+                        <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/ncr_new.png" width="60px" alt="" />
+                        <div>Delhi NCR</div>
+                    </div>
+                    <div onclick="locationUpdate(id)" id="Hyderabad">
+                        <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/hyd_new.png" width="60px" alt="" />
+                        <div>Hyderabad</div>
+                    </div>
+                    <div onclick="locationUpdate(id)" id="Mumbai">
+                        <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/mumbai_selected.png" width="60px" alt="" />
+                        <div>Mumbai</div>
+                    </div>
+                </div>
+                <div id="location-popup-city-header">OTHER CITY</div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Chennai">Chennai</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Visakhapatnam">Visakhapatnam</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="locationUpdate(id)" id="Jaipur">Jaipur</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Vadodara">Vadodara</a
+              >
+            </li>
+            <li><a href="#" onclick="locationUpdate(id)" id="Pune">Pune</a></li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Kolkata">Kolkata</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Ahmedabad">Ahmedabad</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="locationUpdate(id)" id="Mysore">Mysore</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Chandigarh Tricity">Chandigarh Tricity</a
+              >
+            </li>
+            <li><a href="#" onclick="locationUpdate(id)" id="Kota">Kota</a></li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Kochi">Kochi</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Ludhiana">Ludhiana</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="locationUpdate(id)" id="Surat">Surat</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Jammu">Jammu</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Amritsar">Amritsar</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="locationUpdate(id)" id="Indore">Indore</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Coimbatore">Coimbatore</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="locationUpdate(id)" id="Manglore"
+                >Manglore</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="locationUpdate(id)" id="Bhopal">Bhopal</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Nagpur">Nagpur</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Kanpur">Kanpur</a>
+                        </li>
+                        <li><a href="#" onclick="locationUpdate(id)" id="Agra">Agra</a></li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Lucknow">Lucknow</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="locationUpdate(id)" id="Other">Other</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- nav-popup-links -->
+
+        <div class="links-container">
+            <div id="dropdown-links">
+                <div id="grid-links">
+                    <div>
+                        <a href="../cultFit-FoodStore/live.html">
+                            <img src="https://static.cure.fit/assets/images/Livefit.svg" alt="" width="38px" />
+                            <div>
+                                <p>LIVE</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../Cultfit-project/home_cult_cultCenters.html">
+                            <img src="https://static.cure.fit/assets/images/cult-icon.svg" alt="" width="38px" />
+                            <div>
+                                <p>CULT</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../cultFit-FoodStore/mindfulness.html">
+                            <img src="https://static.cure.fit/assets/images/mind-icon.svg" alt="" width="38px" />
+                            <div>
+                                <p>MIND</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../Cultfit-Care/labtests.html">
+                            <img src="https://static.cure.fit/assets/images/carefit-blk.svg" alt="" width="38px" />
+                            <div>
+                                <p>CARE</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="cultsport.html">
+                            <img src="https://static.cure.fit/assets/images/store-icon.svg" alt="" width="38px" />
+                            <div>
+                                <p>STORE</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="">
+            <div class="slider">
+                <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/3c938ec6-aac9-4575-90bb-531c7d1a9e28.png" alt="" />
+            </div>
+        </a>
+        <div class="imgcard">
+            <div>
+                <div class="top">
+                    <div>
+                        <h1>cult.fit At Home Equipments</h1>
+                        <p>Ergonomic Design, Easy to Grip, Cult Certified</p>
+                    </div>
+                    <div>
+                        <a href="">See all ></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a onclick="showproduct('pro1')">
+                        <div>
+                            <img id="pro1img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/XoFAZMGfvQufXMSKisBgsnAd" alt="" />
+                            <h4 id="pro1name">CULTSPORT</h4>
+                            <p id="pro1desc">Resistance Band (7-16 Kg)</p>
+                            <p class="price">
+                                ₹ <span id="pro1price">639</span>
+                                <span id="pro1cutprice" class="cutprice">₹ 799</span
+                ><span id="pro1discount" class="discount">20</span
+                ><span class="discount">% Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro2')">
+                        <div>
+                            <img id="pro2img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/hT9rfUJQJrrTmCXqVjCLRY2i" alt="" />
+                            <h4 id="pro2name">CULTSPORT</h4>
+                            <p id="pro2desc">Resistance Band (7-16 Kg)</p>
+                            <p class="price">
+                                ₹ <span id="pro2price">839</span>
+                                <span id="pro2cutprice" class="cutprice">₹ 1199</span
+                ><span id="pro2discount" class="discount"> 30</span
+                ><span class="discount">% Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro3')">
+                        <div>
+                            <img id="pro3img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/UZ98jkaDsvS3DRoUmbyJD7Ei" alt="" />
+                            <h4 id="pro3name">CULTSPORT</h4>
+                            <p id="pro3desc">cult.fit Kettlebell - 4Kg*1Pc</p>
+                            <p class="price">
+                                ₹ <span id="pro3price">1399</span>
+                                <span id="pro3cutprice" class="cutprice">₹ 1999</span
+                ><span id="pro3discount" class="discount"> 30</span
+                ><span class="discount">% Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro4')">
+                        <div>
+                            <img id="pro4img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/seKiZLxX7QDun9USKXHGkMZt" alt="" />
+                            <h4 id="pro4name">CULTSPORT</h4>
+                            <p id="pro4desc">cult.fit Kettlebell - 6Kg*1Pc</p>
+                            <p class="price">
+                                ₹ <span id="pro4price">1749</span>
+                                <span id="pro4cutprice" class="cutprice">₹ 2499</span
+                ><span id="pro4discount" class="discount"> 30</span
+                ><span class="discount">% Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro5')">
+                        <div>
+                            <img id="pro5img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/MUFRrZLsq5rn7Lvqu7umhJxh" alt="" />
+                            <h4 id="pro5name">CULTSPORT</h4>
+                            <p id="pro5desc">cult.fit Kettlebell - 8Kg*1Pc</p>
+                            <p class="price">
+                                ₹ <span id="pro5price">2309</span>
+                                <span id="pro5cutprice" class="cutprice">₹ 3299</span
+                ><span id="pro5discount" class="discount"> 30</span
+                ><span class="discount">% Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <!-- <a onclick="showproduct('pro5')" href="">
+                        <div>
+                            <img  id="pro5img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/seKiZLxX7QDun9USKXHGkMZt"
+                                alt="">
+                            <h4  id="pro5name">CULTSPORT</h4>
+                            <p  id="pro5desc">cult.fit Kettlebell - 8Kg*1Pc</p>
+                            <p class="price"> ₹ <span  id="pro5price">2309</span> <span  id="pro5cutprice" class="cutprice">₹ 3299</span  id="pro5discount"><span class="discount"> 30%Off</span></p>
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+            <div>
+                <div class="top">
+                    <div>
+                        <h1>FormFit Sports Bras</h1>
+                        <p>Fit for every from!</p>
+                    </div>
+                    <div>
+                        <a href="">See all ></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a onclick="showproduct('pro6')">
+                        <div>
+                            <img id="pro6img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/xi2iPU9GarCA2CZvMsdwYFKd" alt="" />
+                            <h4 id="pro6name">CULTSPORT</h4>
+                            <p id="pro6desc">Vital Anatomy Grey Sports Bra</p>
+                            <p class="price">
+                                ₹ <span id="pro6price">899</span>
+                                <span id="pro6cutprice" class="cutprice">₹ 1499</span
+                ><span id="pro6discount" class="discount"> 40 </span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro7')">
+                        <div>
+                            <img id="pro7img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/jvgCcFE5ATyz1gtKqLdGG9EC" alt="" />
+                            <h4 id="pro7name">CULTSPORT</h4>
+                            <p id="pro7desc">FormFit High Impact Celo Sports Bra</p>
+                            <p class="price">
+                                ₹ <span id="pro7price">959</span>
+                                <span id="pro7cutprice" class="cutprice">₹ 1599</span
+                ><span id="pro7discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro8')">
+                        <div>
+                            <img id="pro8img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/HsfVXWCeiyvFxZJavRgZ46sV" alt="" />
+                            <h4 id="pro8name">CULTSPORT</h4>
+                            <p id="pro8desc">FormFit High Impact Ivy Sports Bra</p>
+                            <p class="price">
+                                ₹ <span id="pro8price">1019</span>
+                                <span id="pro8cutprice" class="cutprice">₹ 1699</span
+                ><span id="pro8discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro9')">
+                        <div>
+                            <img id="pro9img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/qh5smkemhxMhphkW7M3aurta" alt="" />
+                            <h4 id="pro9name">CULTSPORT</h4>
+                            <p id="pro9desc">FormFit Medium Impact Iris Sports Bra</p>
+                            <p class="price">
+                                ₹ <span id="pro9price">1019</span>
+                                <span id="pro9cutprice" class="cutprice">₹ 1699</span
+                ><span id="pro9discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro10')">
+                        <div>
+                            <img id="pro10img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/BoDrTDgCPPDDy1Ze6ptpuXXR" alt="" />
+                            <h4 id="pro10name">CULTSPORT</h4>
+                            <p id="pro10desc">FormFit Medium Impact Zoe Sports Bra</p>
+                            <p class="price">
+                                ₹ <span id="pro10price">1019</span>
+                                <span id="pro10cutprice" class="cutprice">₹ 1699</span
+                ><span id="pro10discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="top">
+                    <div>
+                        <h1>Back to Cult Gear</h1>
+                        <p>T-shirts, Joggers and Leggings</p>
+                    </div>
+                    <div>
+                        <a href="">See all ></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a onclick="showproduct('pro11')">
+                        <div>
+                            <img id="pro11img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/1TbxQgv2XAxazQn9uuvsPkLb" alt="" />
+                            <h4 id="pro11name">CULTSPORT</h4>
+                            <p id="pro11desc">Women's Adjustable Training Leggi...</p>
+                            <p class="price">
+                                ₹ <span id="pro11price">1399</span>
+                                <span id="pro11cutprice" class="cutprice">₹ 1999</span
+                ><span id="pro11discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro12')">
+                        <div>
+                            <img id="pro12img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/jSsJ1T1UXMRHSsGJGspbaLck" alt="" />
+                            <h4 id="pro12name">CULTSPORT</h4>
+                            <p id="pro12desc">Women's High-Intensity Training Le...</p>
+                            <p class="price">
+                                ₹ <span id="pro12price">1399</span>
+                                <span id="pro12cutprice" class="cutprice">₹ 1999</span
+                ><span id="pro12discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro13')">
+                        <div>
+                            <img id="pro13img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/jbMUao2fy5GZRj22guJNKFt7" alt="" />
+                            <h4 id="pro13name">CULTSPORT</h4>
+                            <p id="pro13desc">Women's Anti-Slip Grip Leggings</p>
+                            <p class="price">
+                                ₹ <span id="pro13price">1139</span>
+                                <span id="pro13cutprice" class="cutprice">₹ 1899</span
+                ><span id="pro13discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro14')">
+                        <div>
+                            <img id="pro14img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/WvkA96H4tmboNwUTi9YLmhhq" alt="" />
+                            <h4 id="pro14name">CULTSPORT</h4>
+                            <p id="pro14desc">Women's Breathable Runing Leggings</p>
+                            <p class="price">
+                                ₹ <span id="pro14price">1329</span>
+                                <span id="pro14cutprice" class="cutprice">₹ 1899</span
+                ><span id="pro14discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro15')">
+                        <div>
+                            <img id="pro15img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/jGnCDaeq22zPM83HRrxWCPzw" alt="" />
+                            <h4 id="pro15name">CULTSPORT</h4>
+                            <p id="pro15desc">Women's Super Flexible Workout Leggings</p>
+                            <p class="price">
+                                ₹ <span id="pro15price">1139</span>
+                                <span id="pro15cutprice" class="cutprice">₹ 1899</span
+                ><span id="pro15discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="top">
+                    <div>
+                        <h1>Flexoft</h1>
+                        <p>Joggers & Sweatshirts for every fit</p>
+                    </div>
+                    <div>
+                        <a href="">See all ></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a onclick="showproduct('pro16')">
+                        <div>
+                            <img id="pro16img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/MYrB2xZNgDrjBcTs7KkvRZHx" alt="" />
+                            <h4 id="pro16name">CULTSPORT</h4>
+                            <p id="pro16desc">Conversational Polo Tshirt</p>
+                            <p class="price">
+                                ₹ <span id="pro16price">899</span>
+                                <span id="pro16cutprice" class="cutprice">₹ 1499</span
+                ><span id="pro16discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro17')">
+                        <div>
+                            <img id="pro17img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/zivcKWWyaZKx7Tyo2m5zdfg9" alt="" />
+                            <h4 id="pro17name">CULTSPORT</h4>
+                            <p id="pro17desc">Flexoft Men's Lounge Joggers</p>
+                            <p class="price">
+                                ₹ <span id="pro17price">1439</span>
+                                <span id="pro17cutprice" class="cutprice">₹ 1799</span
+                ><span id="pro17discount" class="discount"> 20</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro18')">
+                        <div>
+                            <img id="pro18img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/usEz2Td8m6WvoEdZewyiGQYg" alt="" />
+                            <h4 id="pro18name">CULTSPORT</h4>
+                            <p id="pro18desc">Flexoft Men's Solid Joggers</p>
+                            <p class="price">
+                                ₹ <span id="pro18price">1259</span>
+                                <span id="pro18cutprice" class="cutprice">₹ 1799</span
+                ><span id="pro18discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro19')">
+                        <div>
+                            <img id="pro19img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/g7MKPbH26Baj3HXm6cv85THa" alt="" />
+                            <h4 id="pro19name">CULTSPORT</h4>
+                            <p id="pro19desc">Flexoft Men's Solid Joggers</p>
+                            <p class="price">
+                                ₹ <span id="pro19price">1439</span>
+                                <span id="pro19cutprice" class="cutprice">₹ 1799</span
+                ><span id="pro19discount" class="discount"> 20</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro20')">
+                        <div>
+                            <img id="pro20img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/jjknwmgAGX26nYghnS17GcN1" alt="" />
+                            <h4 id="pro20name">CULTSPORT</h4>
+                            <p id="pro20desc">Flexoft Men's Classic Tapered Joggers</p>
+                            <p class="price">
+                                ₹ <span id="pro20price">1259</span>
+                                <span id="pro20cutprice" class="cutprice">₹ 1799</span
+                ><span id="pro20discount" class="discount"> 20</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="top">
+                    <div>
+                        <h1>FAB is Back!</h1>
+                        <p>Flydry, Anti-microbial and Breathable</p>
+                    </div>
+                    <div>
+                        <a href="">See all ></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a onclick="showproduct('pro21')">
+                        <div>
+                            <img id="pro21img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/Qx91FGw3LbAWwBrYTsMMDqXm" alt="" />
+                            <h4 id="pro21name">CULTSPORT</h4>
+                            <p id="pro21desc">FAB Men's Color Blocked Worked T-shirt</p>
+                            <p class="price">
+                                ₹ <span id="pro21price">719</span>
+                                <span id="pro21cutprice" class="cutprice">₹ 1199</span
+                ><span id="pro21discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro22')">
+                        <div>
+                            <img id="pro22img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/2oN2wy2uPKbtyw28V1DFQmxm" alt="" />
+                            <h4 id="pro22name">CULTSPORT</h4>
+                            <p id="pro22desc">FAB Men's Polo T-shirt</p>
+                            <p class="price">
+                                ₹ <span id="pro22price">519</span>
+                                <span id="pro22cutprice" class="cutprice">₹ 1299</span
+                ><span id="pro22discount" class="discount"> 60</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro23')">
+                        <div>
+                            <img id="pro23img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/s5AftQ6DEKS9M3xNm4pJsBLr" alt="" />
+                            <h4 id="pro23name">CULTSPORT</h4>
+                            <p id="pro23desc">FAB Men's Polo T-shirt</p>
+                            <p class="price">
+                                ₹ <span id="pro23price">519</span>
+                                <span id="pro23cutprice" class="cutprice">₹ 1299</span
+                ><span id="pro23discount" class="discount"> 60</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro24')">
+                        <div>
+                            <img id="pro24img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/RLUSjvRM7EBSPSE5mBPh6WSD" alt="" />
+                            <h4 id="pro24name">CULTSPORT</h4>
+                            <p id="pro24desc">FAB Men's Solid Workout T-shirt</p>
+                            <p class="price">
+                                ₹ <span id="pro24price">779</span>
+                                <span id="pro24cutprice" class="cutprice">₹ 1299</span
+                ><span id="pro24discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro25')">
+                        <div>
+                            <img id="pro25img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/KtauJGiwiBQonsSsv14aUdC8" alt="" />
+                            <h4 id="pro25name">CULTSPORT</h4>
+                            <p id="pro25desc">Men's Athleisure T-shirt</p>
+                            <p class="price">
+                                ₹ <span id="pro25price">359</span>
+                                <span id="pro25cutprice" class="cutprice">₹ 899</span
+                ><span id="pro25discount" class="discount"> 60</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="top">
+                    <div>
+                        <h1>Knockout Boxing Collection</h1>
+                        <p>Flydry, perfect stretch and breathable</p>
+                    </div>
+                    <div>
+                        <a href="">See all ></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a onclick="showproduct('pro26')">
+                        <div>
+                            <img id="pro26img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/fXQ1QZFLck5Vi1putFdVtQYE" alt="" />
+                            <h4 id="pro26name">CULTSPORT</h4>
+                            <p id="pro26desc">Knockout Vital Workout Shorts</p>
+                            <p class="price">
+                                ₹ <span id="pro26price">839</span>
+                                <span id="pro26cutprice" class="cutprice">₹ 1199</span
+                ><span id="pro26discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro27')">
+                        <div>
+                            <img id="pro27img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/tYmyTjHmVY3NZduAix8GpTNW" alt="" />
+                            <h4 id="pro27name">CULTSPORT</h4>
+                            <p id="pro27desc">Knockout Mesh Panel T-shirt</p>
+                            <p class="price">
+                                ₹ <span id="pro27price">779</span>
+                                <span id="pro27cutprice" class="cutprice">₹ 1299</span
+                ><span id="pro27discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro28')">
+                        <div>
+                            <img id="pro28img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/rE3iEDaiQZdnDMUKwUNCPkde" alt="" />
+                            <h4 id="pro28name">CULTSPORT</h4>
+                            <p id="pro28desc">Knockout Signature T-shirt</p>
+                            <p class="price">
+                                ₹ <span id="pro28price">779</span>
+                                <span id="pro28cutprice" class="cutprice">₹ 1299</span
+                ><span id="pro28discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro29')">
+                        <div>
+                            <img id="pro29img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/PeSM38vuqP4Z76VZvSLhoPyS" alt="" />
+                            <h4 id="pro29name">CULTSPORT</h4>
+                            <p id="pro29desc">Knockout Mesh Panel T-shirt</p>
+                            <p class="price">
+                                ₹ <span id="pro29price">779</span>
+                                <span id="pro29cutprice" class="cutprice">₹ 1299</span
+                ><span id="pro29discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro30')">
+                        <div>
+                            <img id="pro30img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/XPegb9QMtUiN7PGvKMdpu1d8" alt="" />
+                            <h4 id="pro30name">CULTSPORT</h4>
+                            <p id="pro30desc">Knockout Mesh Panel T-shirt</p>
+                            <p class="price">
+                                ₹ <span id="pro30price">779</span>
+                                <span id="pro30cutprice" class="cutprice">₹ 1299</span
+                ><span id="pro30discount" class="discount"> 40</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="top">
+                    <div>
+                        <h1>Absolute Fit Workout Leggings</h1>
+                        <p>Now no more adjust!</p>
+                    </div>
+                    <div>
+                        <a href="">See all ></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a onclick="showproduct('pro31')">
+                        <div>
+                            <img id="pro31img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/4kKDrsij6gsjamikTvworAFN" alt="" />
+                            <h4 id="pro31name">CULTSPORT</h4>
+                            <p id="pro31desc">Absolute Fit Power Mesh Leggings</p>
+                            <p class="price">
+                                ₹ <span id="pro31price">1399</span>
+                                <span id="pro31cutprice" class="cutprice">₹ 1999</span
+                ><span id="pro31discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro32')">
+                        <div>
+                            <img id="pro32img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/kaQEZ2kfFPwCcqHwuLApFYnV" alt="" />
+                            <h4 id="pro32name">CULTSPORT</h4>
+                            <p id="pro32desc">Absolute Fit Women's Abstract Leggings</p>
+                            <p class="price">
+                                ₹ <span id="pro32price">1329</span>
+                                <span id="pro32cutprice" class="cutprice">₹ 1899</span
+                ><span id="pro32discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro33')">
+                        <div>
+                            <img id="pro33img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/7PdDke4aydz41xZe41CsTBB7" alt="" />
+                            <h4 id="pro33name">CULTSPORT</h4>
+                            <p id="pro33desc">Absolute Fit Women's Anti-Chafing Leggings</p>
+                            <p class="price">
+                                ₹ <span id="pro33price">899</span>
+                                <span id="pro33cutprice" class="cutprice">₹ 1299</span
+                ><span id="pro33discount" class="discount"> 31</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro34')">
+                        <div>
+                            <img id="pro34img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/Jsacr1pRmpBvLm5f9BbZ4zqv" alt="" />
+                            <h4 id="pro34name">CULTSPORT</h4>
+                            <p id="pro34desc">Absolute Fit Women's Bold Leggings</p>
+                            <p class="price">
+                                ₹ <span id="pro34price">1189</span>
+                                <span id="pro34cutprice" class="cutprice">₹ 1699</span
+                ><span id="pro34discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro35')">
+                        <div>
+                            <img id="pro35img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/qo2qrBWRUZswWGJoDEUg1DcK" alt="" />
+                            <h4 id="pro35name">CULTSPORT</h4>
+                            <p id="pro35desc">Absolute Fit Women's Camo Leggings</p>
+                            <p class="price">
+                                ₹ <span id="pro35price">1329</span>
+                                <span id="pro35cutprice" class="cutprice">₹ 1899</span
+                ><span id="pro35discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="top">
+                    <div>
+                        <h1>cult.fit Kettlebell</h1>
+                        <p>One weight to rule them all!</p>
+                    </div>
+                    <div>
+                        <a href="">See all ></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a onclick="showproduct('pro36')">
+                        <div>
+                            <img id="pro36img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/seKiZLxX7QDun9USKXHGkMZt" alt="" />
+                            <h4 id="pro36name">CULTSPORT</h4>
+                            <p id="pro36desc">cult.fit Kettlebell - 6 kg*1 pc</p>
+                            <p class="price">
+                                ₹ <span id="pro36price">1749</span>
+                                <span id="pro36cutprice" class="cutprice">₹ 2499</span
+                ><span id="pro36discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro37')">
+                        <div>
+                            <img id="pro37img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/2nCpSvsh5pXuWKJLMBAcPLvd" alt="" />
+                            <h4 id="pro37name">CULTSPORT</h4>
+                            <p id="pro37desc">cult.fit Kettlebell - 10 kg*1 pc</p>
+                            <p class="price">
+                                ₹ <span id="pro37price">2799</span>
+                                <span id="pro37cutprice" class="cutprice">₹ 3999</span
+                ><span id="pro37discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro38')">
+                        <div>
+                            <img id="pro38img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/UZ98jkaDsvS3DRoUmbyJD7Ei" alt="" />
+                            <h4 id="pro38name">CULTSPORT</h4>
+                            <p id="pro38desc">cult.fit Kettlebell - 4 kg*1 pc</p>
+                            <p class="price">
+                                ₹ <span id="pro38price">1399</span>
+                                <span id="pro38cutprice" class="cutprice">₹ 1999</span
+                ><span id="pro38discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro39')">
+                        <div>
+                            <img id="pro39img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/fnkZ83CohTxTv33h2A1ZoTU2" alt="" />
+                            <h4 id="pro39name">CULTSPORT</h4>
+                            <p id="pro39desc">cult.fit Kettlebell - 16 kg*1 pc</p>
+                            <p class="price">
+                                ₹ <span id="pro39price">4059</span>
+                                <span id="pro39cutprice" class="cutprice">₹ 5799</span
+                ><span id="pro39discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro40')">
+                        <div>
+                            <img id="pro40img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/HChpb8aSouvvEn1hEgUgwkUJ" alt="" />
+                            <h4 id="pro40name">CULTSPORT</h4>
+                            <p id="pro40desc">cult.fit Kettlebell - 12 kg*1 pc</p>
+                            <p class="price">
+                                ₹ <span id="pro40price">3289</span>
+                                <span id="pro40cutprice" class="cutprice">₹ 4699</span
+                ><span id="pro40discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="top">
+                    <div>
+                        <h1>Winter is Early</h1>
+                    </div>
+                    <div>
+                        <a href="">See all ></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a onclick="showproduct('pro41')">
+                        <div>
+                            <img id="pro41img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/XLKUQrNJ7tfeyE3D7uqbkMkN" alt="" />
+                            <h4 id="pro41name">CULTSPORT</h4>
+                            <p id="pro41desc">Steel Gray Sweatshirt</p>
+                            <p class="price">
+                                ₹ <span id="pro41price">1319</span>
+                                <span id="pro41cutprice" class="cutprice">₹ 3299</span
+                ><span id="pro41discount" class="discount"> 60</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro42')">
+                        <div>
+                            <img id="pro42img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/3QTYMLNnHuziWSDYHGFQKbfp" alt="" />
+                            <h4 id="pro42name">CULTSPORT</h4>
+                            <p id="pro42desc">D Structure Black Graphic Sweatshirt</p>
+                            <p class="price">
+                                ₹ <span id="pro42price">1039</span>
+                                <span id="pro42cutprice" class="cutprice">₹ 2599</span
+                ><span id="pro42discount" class="discount"> 60</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro43')">
+                        <div>
+                            <img id="pro43img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/UmpS1t1UhwuodhVytdZ1N6Cz" alt="" />
+                            <h4 id="pro43name">CULTSPORT</h4>
+                            <p id="pro43desc">D Structure Navy Graphic Sweatshirt</p>
+                            <p class="price">
+                                ₹ <span id="pro43price">1039</span>
+                                <span id="pro43cutprice" class="cutprice">₹ 2599</span
+                ><span id="pro43discount" class="discount"> 60</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro44')">
+                        <div>
+                            <img id="pro44img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/ivihCTV58yHVkQQNmxjNZcZc" alt="" />
+                            <h4 id="pro44name">CULTSPORT</h4>
+                            <p id="pro44desc">Vital Emerge Black Zip Sweatshirt/p></p>
+                            <p class="price">
+                                ₹ <span id="pro44price">1159</span>
+                                <span id="pro44cutprice" class="cutprice">₹ 2899</span
+                ><span id="pro44discount" class="discount"> 60</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro45')">
+                        <div>
+                            <img id="pro45img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/ZeYSggQuMpvW26VEDLPUAhNU" alt="" />
+                            <h4 id="pro45name">CULTSPORT</h4>
+                            <p id="pro45desc">Brisk Marble White Jacket</p>
+                            <p class="price">
+                                ₹ <span id="pro45price">1279</span>
+                                <span id="pro45cutprice" class="cutprice">₹ 3199</span
+                ><span id="pro45discount" class="discount"> 60</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="top">
+                    <div>
+                        <h1>Vitals</h1>
+                        <p>Everyday essentials for your workout regime</p>
+                    </div>
+                    <div>
+                        <a href="">See all ></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a onclick="showproduct('pro46')">
+                        <div>
+                            <img id="pro46img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/Wv3uA2uG94vW1Ai7QzKp5sDp" alt="" />
+                            <h4 id="pro46name">CULTSPORT</h4>
+                            <p id="pro46desc">Solid Workout Shorts</p>
+                            <p class="price">
+                                ₹ <span id="pro46price">839</span>
+                                <span id="pro46cutprice" class="cutprice">₹ 1199</span
+                ><span id="pro46discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro47')">
+                        <div>
+                            <img id="pro47img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/aPL6Uq1Tsgn5tM7kz8MsBy6x" alt="" />
+                            <h4 id="pro47name">CULTSPORT</h4>
+                            <p id="pro47desc">Vital Blaze Navy Gym Shorts</p>
+                            <p class="price">
+                                ₹ <span id="pro47price">909</span>
+                                <span id="pro47cutprice" class="cutprice">₹ 1299</span
+                ><span id="pro47discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro48')">
+                        <div>
+                            <img id="pro48img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/zUXmN3PXNtWEhngCLccVBUWE" alt="" />
+                            <h4 id="pro48name">CULTSPORT</h4>
+                            <p id="pro48desc">Vital Rep Red Gym Shorts</p>
+                            <p class="price">
+                                ₹ <span id="pro48price">979</span>
+                                <span id="pro48cutprice" class="cutprice">₹ 1399</span
+                ><span id="pro48discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro49')">
+                        <div>
+                            <img id="pro49img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/XipwZY9AFn4fLcFajHFvQGXr" alt="" />
+                            <h4 id="pro49name">CULTSPORT</h4>
+                            <p id="pro49desc">Vital Blaze Teal Gym Shorts</p>
+                            <p class="price">
+                                ₹ <span id="pro49price">909</span>
+                                <span id="pro49cutprice" class="cutprice">₹ 1299</span
+                ><span id="pro49discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro50')">
+                        <div>
+                            <img id="pro50img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/3nBTeHuyAXQ9UqMp3kAqFe58" alt="" />
+                            <h4 id="pro50name">CULTSPORT</h4>
+                            <p id="pro50desc">Vital Finish Blue Gym Shorts</p>
+                            <p class="price">
+                                ₹ <span id="pro50price">909</span>
+                                <span id="pro50cutprice" class="cutprice">₹ 1299</span
+                ><span id="pro50discount" class="discount"> 30</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="top">
+                    <div>
+                        <h1>Bags</h1>
+                        <p>Classy luggage for the gym and the streets</p>
+                    </div>
+                    <div>
+                        <a href="">See all ></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a onclick="showproduct('pro51')">
+                        <div>
+                            <img id="pro51img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/g7Hpc2YBypZWtsB7qkj8CSgz" alt="" />
+                            <h4 id="pro51name">CULTSPORT</h4>
+                            <p id="pro51desc">Signature Cannon Black Duffel</p>
+                            <p class="price">
+                                ₹ <span id="pro51price">879</span>
+                                <span id="pro51cutprice" class="cutprice">₹ 2199</span
+                ><span id="pro51discount" class="discount"> 60</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro52')">
+                        <div>
+                            <img id="pro52img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/dgrYNawEMc3CEFYMBmTq98tz" alt="" />
+                            <h4 id="pro52name">CULTSPORT</h4>
+                            <p id="pro52desc">Signature Cannon Grey Duffel</p>
+                            <p class="price">
+                                ₹ <span id="pro52price">879</span>
+                                <span id="pro52cutprice" class="cutprice">₹ 2199</span
+                ><span id="pro52discount" class="discount"> 60</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a onclick="showproduct('pro53')">
+                        <div>
+                            <img id="pro53img" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/xVNbpiSeNTmok4UaxufzTuF1" alt="" />
+                            <h4 id="pro53name">CULTSPORT</h4>
+                            <p id="pro53desc">Vital Prism Orange Backpack</p>
+                            <p class="price">
+                                ₹ <span id="pro53price">1199</span>
+                                <span id="pro53cutprice" class="cutprice">₹ 2999</span
+                ><span id="pro53discount" class="discount"> 60</span
+                ><span class="discount"> % Off</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h1 class="heading">PERFORMANCE SPORTSWEAR</h1>
+                <h1 class="subheading">FOR THE EVERYDAY ATHLETE</h1>
+            </div>
+        </div>
+        <div class="imgcard faq">
+            <div class="top">
+                <div>
+                    <h1>FAQS</h1>
+                    <p>7 QUESTIONS</p>
+                </div>
+                <div>
+                    <a href="">SEE ALL</a>
+                </div>
+            </div>
+            <button class="accordion">
+        <li>What is cultsport and what does it offer?</li>
+      </button>
+            <div class="panel">
+                <p>
+                    cultsport is a premium workout wear brand from the house of cure.fit. cultsport offers a variety of premium workout and sports gear that helps fitness enthusiasts and everyday athletes up their daily fitness game and look good while they are at it. With
+                    a goal to bring top notch products with a foot forward in fashion, longevity and functionality, cultsport attempts at bringing the best performing apparel, footgear and accessories ideal for all workout formats. Read here to know in
+                    detail how cultsport is designed to enhance your workout here.
+                </p>
+                <p>
+                    Do you find this helpful? <span><a href=""> YES </a></span
+          ><span><a href=""> NO</a></span>
+                </p>
+            </div>
+            <hr />
+
+            <button class="accordion">
+        <li>What is cultsport and what does it offer?</li>
+      </button>
+            <div class="panel">
+                <p>
+                    cultsport is a premium workout wear brand from the house of cure.fit. cultsport offers a variety of premium workout and sports gear that helps fitness enthusiasts and everyday athletes up their daily fitness game and look good while they are at it. With
+                    a goal to bring top notch products with a foot forward in fashion, longevity and functionality, cultsport attempts at bringing the best performing apparel, footgear and accessories ideal for all workout formats. Read here to know in
+                    detail how cultsport is designed to enhance your workout here.
+                </p>
+                <p>
+                    Do you find this helpful? <span><a href=""> YES </a></span
+          ><span><a href=""> NO</a></span>
+                </p>
+            </div>
+            <hr />
+
+            <button class="accordion">
+        <li>What is cultsport and what does it offer?</li>
+      </button>
+            <div class="panel">
+                <p>
+                    cultsport is a premium workout wear brand from the house of cure.fit. cultsport offers a variety of premium workout and sports gear that helps fitness enthusiasts and everyday athletes up their daily fitness game and look good while they are at it. With
+                    a goal to bring top notch products with a foot forward in fashion, longevity and functionality, cultsport attempts at bringing the best performing apparel, footgear and accessories ideal for all workout formats. Read here to know in
+                    detail how cultsport is designed to enhance your workout here.
+                </p>
+                <p>
+                    Do you find this helpful? <span><a href=""> YES </a></span
+          ><span><a href=""> NO</a></span>
+                </p>
+            </div>
+            <hr />
+            <button class="accordion">
+        <li>What is cultsport and what does it offer?</li>
+      </button>
+            <div class="panel">
+                <p>
+                    cultsport is a premium workout wear brand from the house of cure.fit. cultsport offers a variety of premium workout and sports gear that helps fitness enthusiasts and everyday athletes up their daily fitness game and look good while they are at it. With
+                    a goal to bring top notch products with a foot forward in fashion, longevity and functionality, cultsport attempts at bringing the best performing apparel, footgear and accessories ideal for all workout formats. Read here to know in
+                    detail how cultsport is designed to enhance your workout here.
+                </p>
+                <p>
+                    Do you find this helpful? <span><a href=""> YES </a></span
+          ><span><a href=""> NO</a></span>
+                </p>
+            </div>
+            <hr />
+            <button class="accordion">
+        <li>What is cultsport and what does it offer?</li>
+      </button>
+            <div class="panel">
+                <p>
+                    cultsport is a premium workout wear brand from the house of cure.fit. cultsport offers a variety of premium workout and sports gear that helps fitness enthusiasts and everyday athletes up their daily fitness game and look good while they are at it. With
+                    a goal to bring top notch products with a foot forward in fashion, longevity and functionality, cultsport attempts at bringing the best performing apparel, footgear and accessories ideal for all workout formats. Read here to know in
+                    detail how cultsport is designed to enhance your workout here.
+                </p>
+                <p>
+                    Do you find this helpful? <span><a href=""> YES </a></span
+          ><span><a href=""> NO</a></span>
+                </p>
+            </div>
+            <hr />
+            <button class="accordion">
+        <li>What is cultsport and what does it offer?</li>
+      </button>
+            <div class="panel">
+                <p>
+                    cultsport is a premium workout wear brand from the house of cure.fit. cultsport offers a variety of premium workout and sports gear that helps fitness enthusiasts and everyday athletes up their daily fitness game and look good while they are at it. With
+                    a goal to bring top notch products with a foot forward in fashion, longevity and functionality, cultsport attempts at bringing the best performing apparel, footgear and accessories ideal for all workout formats. Read here to know in
+                    detail how cultsport is designed to enhance your workout here.
+                </p>
+                <p>
+                    Do you find this helpful? <span><a href=""> YES </a></span
+          ><span><a href=""> NO</a></span>
+                </p>
+            </div>
+            <hr />
+            <button class="accordion">
+        <li>What is cultsport and what does it offer?</li>
+      </button>
+            <div class="panel">
+                <p>
+                    cultsport is a premium workout wear brand from the house of cure.fit. cultsport offers a variety of premium workout and sports gear that helps fitness enthusiasts and everyday athletes up their daily fitness game and look good while they are at it. With
+                    a goal to bring top notch products with a foot forward in fashion, longevity and functionality, cultsport attempts at bringing the best performing apparel, footgear and accessories ideal for all workout formats. Read here to know in
+                    detail how cultsport is designed to enhance your workout here.
+                </p>
+                <p>
+                    Do you find this helpful? <span><a href=""> YES </a></span
+          ><span><a href=""> NO</a></span>
+                </p>
+            </div>
+            <hr />
+        </div>
+        <div id="footer">
+            <div id="footer-container">
+                <div id="footer-part-1">
+                    <div id="footer-details">
+                        <div>
+                            <img src="https://static.cure.fit/assets/images/cult-logo-white.svg" alt="" width="126" height="42" />
+                        </div>
+                        <div class="description">
+                            At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation, and medical & lifestyle care hassle-free. #BeBetterEveryDay
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li><a href="#" target="_blank">CONTACT US</a></li>
+                        <li><a href="#" target="_blank">BLOG</a></li>
+                        <li><a href="#" target="_blank">PARTNER.FIT</a></li>
+                        <li><a href="#" target="_blank">TALKS</a></li>
+                        <li><a href="#" target="_blank">CAREERS</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#" target="_blank">CULTFIT FOR BUSINESSES</a></li>
+                        <li><a href="#" target="_blank">CULT FRANCHISE</a></li>
+                        <li><a href="#" target="_blank">CULT PASS NETWORK</a></li>
+                        <li><a href="#" target="_blank">CORPORATE PARTNERSHIPS</a></li>
+                    </ul>
+
+                    <ul>
+                        <li class="footer-app-information">
+                            <img src="https://static.cure.fit/assets/images/app-store.svg" alt="" width="80%" onclick="applestore()" />
+                        </li>
+                        <li class="footer-app-information">
+                            <img src="https://static.cure.fit/assets/images/play-store.svg" alt="" width="80%" onclick="playsotre()" />
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="important-links">
+                    <div>RELATED SEARCHES</div>
+                    <hr color="#A2A2A2" />
+                    <div id="important-links-list">
+                        <ul>
+                            <li><a href="#">Gym Near Me</a></li>
+                            <li><a href="#">Consult Nutritionist Online</a></li>
+                            <li><a href="#">Chest Exercises at Home</a></li>
+                            <li><a href="#">Stress Management</a></li>
+                            <li><a href="#">Mindfulness Meditation</a></li>
+                            <li><a href="#">Gyms in Mumbai</a></li>
+                            <li><a href="#">Gyms in Kolkata</a></li>
+                            <li><a href="#">Home Workouts</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Online Personal Training</a></li>
+                            <li><a href="#">Consult Gynecologist Online</a></li>
+                            <li><a href="#">Fat Burning Exercises</a></li>
+                            <li><a href="#">Yoga Asanas</a></li>
+                            <li><a href="#">Yoga Nidra</a></li>
+                            <li><a href="#">Gyms in Delhi</a></li>
+                            <li><a href="#">Gyms in Ahmedabad</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Online Doctor Consultation</a></li>
+                            <li><a href="#">Diagnostic tests</a></li>
+                            <li><a href="#">Six Pack Workout</a></li>
+                            <li><a href="#">Meditation Music</a></li>
+                            <li><a href="#">Dermatologist online</a></li>
+                            <li><a href="#">Gyms in Pune</a></li>
+                            <li><a href="#">Gyms in Chandigarh</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Therapist consultation</a></li>
+                            <li><a href="#">Food Near Me</a></li>
+                            <li><a href="#">Yoga Postures for Beginners</a></li>
+                            <li><a href="#">Pranayama</a></li>
+                            <li><a href="#">Othopedist doctor near me</a></li>
+                            <li><a href="#">Gyms in Hydrabad</a></li>
+                            <li><a href="#">Gyms in Indore</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Online Fitness Classes</a></li>
+                            <li><a href="#">Healthy Recipes</a></li>
+                            <li><a href="#">Surya Namaskar for Beginners</a></li>
+                            <li><a href="#">Bedtime Stories for Kids</a></li>
+                            <li><a href="#">Manchow Soup</a></li>
+                            <li><a href="#">Gyms in Chennai</a></li>
+                            <li><a href="#">Gyms in Coimbatore</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Consult Cardiologist Online</a></li>
+                            <li><a href="#">Reduce Belly Fat</a></li>
+                            <li><a href="#">Yoga for Stress Relief</a></li>
+                            <li><a href="#">Meditation in Hindi</a></li>
+                            <li><a href="#">Badam Milk</a></li>
+                            <li><a href="#">Gyms in Jaipur</a></li>
+                            <li><a href="#">Gyms in Bangalore</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div id="contact-links">
+                        <div><a href="#">Contact us</a></div>
+                        <div><a href="#">FAQ</a></div>
+                        <div><a href="#">Terms and Condition</a></div>
+                        <div><a href="#">Privacy Policy</a></div>
+                        <div><a href="#">Refund Policy</a></div>
+                    </div>
+                    <div id="icons">
+                        <a href="https://www.youtube.com/channel/UCSE72IaHOL-1Tv-m3JHE4Cg" target="_blank"><i class="fab fa-youtube"></i
+            ></a>
+                        <a href="https://www.instagram.com/cultfitOfficial/" target="_blank"><i class="fab fa-instagram"></i
+            ></a>
+                        <a href="https://twitter.com/cultfitOfficial" target="_blank"><i class="fab fa-twitter"></i
+            ></a>
+                        <a href="https://www.facebook.com/BeCureFit/" target="_blank"><i class="fab fa-facebook-f"></i
+            ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--------------- User Information ---------------->
+
+        <div id="user-info-popup">
+            <div onclick="window.location.href ='../Cultfit-project/userProfile.html'">
+                <i class="fas fa-user"></i> Profile
+            </div>
+            <hr />
+            <div onclick="window.location.href ='../Cultfit-project/userSupport.html'">
+                <i class="fas fa-headset"></i> Support
+            </div>
+            <hr />
+            <div onclick="window.location.href ='../Cultfit-project/userAccount.html'">
+                <i class="fas fa-cog"></i> Account
+            </div>
+            <hr />
+            <div onclick="logout()"><i class="fas fa-sign-out-alt"></i> Log out</div>
+        </div>
+
+        <script src="cultsport.js"></script>
+</body>
+
+</html>
+<script>
+    let store = JSON.parse(localStorage.getItem("store"));
+    if (store != null) {
+        let len = 0;
+        for (var i = 0; i < store.length; i++) {
+            if (store[i].qty >= 1) {
+                len++;
+            }
+        }
+        let badge = document.getElementById("badge");
+        badge.innerHTML = len;
+    }
+
+    function showproduct(pro1) {
+        let image = document.getElementById(pro1 + "img").src;
+        let name = document.getElementById(pro1 + "name").innerHTML;
+        let desc = document.getElementById(pro1 + "desc").innerHTML;
+        let price = document.getElementById(pro1 + "price").innerHTML;
+        let cutprice = document.getElementById(pro1 + "cutprice").innerHTML;
+        let discount = document.getElementById(pro1 + "discount").innerHTML;
+        // el=name + " " +desc + price + " " + cutprice + " " +discount
+        //alert(pro1)
+        var queryString =
+            "?" +
+            image +
+            "&" +
+            name +
+            "&" +
+            desc +
+            "&" +
+            price +
+            "&" +
+            cutprice +
+            "&" +
+            discount +
+            "&" +
+            pro1;
+        window.location.href = "showproduct.html" + queryString;
+    }
+</script>
+p

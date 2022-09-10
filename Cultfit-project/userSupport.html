@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b169d8feab.js" crossorigin="anonymous"></script>
+    <title>Profile</title>
+    <link rel="icon" href="https://static.cure.fit/assets/images/favicon-modified.png" type="image/x-icon">
+    <link rel="stylesheet" href="userSupport.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="nav-bar">
+            <nav>
+                <div class="nav-grid">
+                    <div id="logo">
+                        <a href="Home.html">
+                            <div id="logo-img">
+                                <img src="https://static.cure.fit/assets/images/curefit-v-man.svg" alt="" width="38px">
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <ul id="nav-lists">
+                            <li class="nav-links"><a href="../cultFit-FoodStore/live.html">
+                                    <img src="https://static.cure.fit/assets/images/Livefit.svg" alt="" width="38px">
+                                    <div>
+                                        <p>LIVE</p>
+                                    </div>
+                                </a></li>
+                            <li class="nav-links"><a
+                                    href="home_cult_cultCenters.html">
+                                    <img src="https://static.cure.fit/assets/images/cult-icon.svg" alt="" width="38px">
+                                    <div>
+                                        <p>CULT</p>
+                                    </div>
+                                </a></li>
+                            <li class="nav-links"><a href="mindfull.html">
+                                    <img src="https://static.cure.fit/assets/images/mind-icon.svg" alt="" width="38px">
+                                    <div>
+                                        <p>MIND</p>
+                                    </div>
+                                </a></li>
+                            <li class="nav-links"><a href="../Cultfit-Care/online_consult.html">
+                                    <img src="https://static.cure.fit/assets/images/carefit-blk.svg" alt=""
+                                        width="38px">
+                                    <div>
+                                        <p>CARE</p>
+                                    </div>
+                                </a></li>
+                            <li class="nav-links"><a href="../Cultfit-Store/cultsport.html">
+                                    <img src="https://static.cure.fit/assets/images/store-icon.svg" alt="" width="38px">
+                                    <div>
+                                        <p>STORE</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div id="nav-bar-right">
+                        <div id="nav-bar-right-items">
+                            <div id="login">
+                                <div id="login-logo">
+                                    <a href="#login"><img
+                                            src="https://static.cure.fit/assets/images/user-image.svg" alt=""></a>
+                                </div>
+                                <a href="#login">
+                                    <div id="login-text">Login</div>
+                                </a>
+                            </div>
+                            <div id="cart">
+                                <a href="#cart">
+                                    <img src="https://static.cure.fit/assets/images/cart-image.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="main-data">
+            <div id="left-data">
+                <div id="user">
+                    <img src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" alt="" width="80px"
+                        id="profile-picture">
+                    <p id="fetchUserName">Ashok Gupta</p>
+                </div>
+                <div id="user-edits">
+                    <ul>
+                        <li onclick="window.location.href='userProfile.html'">
+                            <div>Profile</div>
+                            <div><i class="fas fa-user"></i></div>
+                        </li>
+                        <li onclick="window.location.href ='userAccount.html'">
+                            <div>Account</div>
+                            <div><i class="fas fa-cog"></i></div>
+                        </li>
+                        <li onclick="window.location.href ='userSupport.html'">
+                            <div>Support</div>
+                            <div><i class="fas fa-headset"></i></div>
+                        </li>
+                        <li>
+                            <div onclick="userLogOut()">Log out</div>
+                            <div><i class="fas fa-sign-out-alt"></i></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!------- User profile ------>
+            <div id="right-data">
+                <div>
+                    <p>Terms & conditions and Privacy Policy</p>
+                    <div>
+                        <ul>
+                            <li><a href="#t&c">Terms and Conditions</a></li>
+                            <li><a href="#privacyPolicy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <p>Contact us</p>
+                    <div>
+                        <ul id="contact-ul">
+                            <li><a href="#call">For any further queries, Call us at <span>+91 7982165384.</span></a></li>
+                            <li><a href="#t&c">For any further queries, write to us at <span>gupta.chandan1499@gmail.com.</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    let check = JSON.parse(localStorage.getItem('cultUserName'));
+    if (check != null) {
+        var login = document.getElementById('login-text');
+        login.innerHTML = `${check.name}`;
+
+        var user = document.getElementById('fetchUserName');
+        user.innerHTML = `${check.name}`;
+
+        let imgSrc = check.img;
+        if(imgSrc != undefined){
+            let img = document.getElementById('profile-picture');
+            img.src = imgSrc;
+        }
+    }
+
+    function userLogOut() {
+        let userData = {
+            name: "Login"
+        }
+        localStorage.setItem('cultUserName', JSON.stringify(userData));
+
+        window.location.href = "Home.html";
+    }
+</script>
+
+</html>

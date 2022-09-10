@@ -1,0 +1,58 @@
+.admin-page {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+.admin-page > div:nth-child(1) {
+  background-color: blanchedalmond;
+  padding: 30px;
+  font-size: 25px;
+  /* height: fit-content; */
+}
+.add-itempart input {
+  height: 40px;
+  width: 90%;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.add-itempart button {
+  width: 40%;
+  height: 35px;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.admin-page > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.admin-page > div:nth-child(2) > div {
+  margin: 5%;
+}
+.ditels {
+  display: grid;
+  grid-template-columns: auto auto;
+  height: 20%;
+}
+.ditels > button {
+  border: 0px;
+  background-color: yellowgreen;
+  cursor: pointer;
+}
+.foodimg {
+  width: 100%;
+  height: 80%;
+  background-size: cover;
+  border-radius: 5px 5px 0px 0px;
+}
+.foodimg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.foodbox {
+  height: 400px;
+}
+.foodbox button {
+  border-radius: 5px;
+  margin-right: 2px;
+}

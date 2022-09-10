@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="https://static.cure.fit/assets/images/favicon-modified.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Best Online Personal Training at Home Only at Cult.fit</title>
+    <script src="https://kit.fontawesome.com/b169d8feab.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="onlinept.css">
+    <link rel="stylesheet" href="../Cultfit-project/Home.css">
+   
+</head>
+
+<body>
+    <div class="container" id="blur">
+        <div id="nav-bar">
+            <nav>
+                <div class="nav-grid">
+                    <div id="logo">
+                        <a href="../Cultfit-project/Home.html">
+                            <div id="logo-img">
+                                <img src="https://static.cure.fit/assets/images/curefit-v-man.svg" alt="" width="38px">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/image/header-web/cult2.svg"
+                                alt="">
+                        </a>
+                        <a href="#dropdown">
+                            <img src="https://static.cure.fit/assets/images/arrow-clp.svg" alt="" id="rotateDropDown"
+                                onclick="dropdowneffect(id)">
+                        </a>
+                    </div>
+                    <div id="nav-links">
+                        <ul>
+                            <li><a href="../Cultfit-project/home_cult_cultCenters.html">Cult Centers</a></li>
+                            <li><a href="#">Gyms</a></li>
+                            <li><a href="onlinept.html">Online PT</a></li>
+                            <li><a href="cultsport.html">Cultsport</a></li>
+                        </ul>
+                    </div>
+                    <div id="nav-bar-right">
+                        <div id="nav-bar-right-items">
+                            <div id="location" onclick="displayLocation(id)">
+                                <a href="#location">
+                                    <div id="location-circle"></div>
+                                </a>
+                                <a href="#location">
+                                    <div id="change-location-navbar">Hyderabad</div>
+                                </a>
+                            </div>
+                            <div id="login">
+                                <div id="login-logo">
+                                    <a href="#login" onclick="fetchLoginPage()"><img
+                                            src="https://static.cure.fit/assets/images/user-image.svg" alt=""></a>
+                                </div>
+                                <a href="#login" onclick="fetchLoginPage()">
+                                    <div id="login-text">Login</div>
+                                </a>
+                            </div>
+                            <div id="cart">
+                                <a href="cartPage.html">
+                                    <img src="https://static.cure.fit/assets/images/cart-image.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- login-page -->
+
+    <div id="login-page">
+        <div id="close-button">
+            <button onclick="window.location.href = 'onlinept.html'"><span>X</span></button>
+        </div>
+        <div id="login-logo-popup">
+            <div><img src="https://static.cure.fit/assets/images/curefit_login_logo.svg" alt=""></div>
+            <img src="https://static.cure.fit/assets/images/cult_name.svg" alt="">
+        </div>
+        <div id="login-input-container">
+            <div id="login-input">Phone Number<br />
+                <input type="number" placeholder="Enter your mobile number" id="login-phone">
+            </div>
+            <div id="login-input">Password<br />
+                <input type="password" placeholder="Enter your Password" id="login-password">
+                <i class="far fa-eye-slash" id="togglePassword" onclick="showHidePassword(id)"></i>
+            </div>
+        </div>
+        <div id="submit-login">
+            <button class="input-login-box" onclick="verifyLogin()">Continue</button>
+        </div>
+        <div class="TnC-check">
+            <div>By Continuing you agree to the
+                <a href="https://static.cult.fit/terms_cult.html" target="_blank">Terms of Services</a>
+                and <a href="https://static.cult.fit/privacy_cult.html" target="_blank">Privacy policy</a>
+            </div>
+        </div>
+        <div>
+            <div id="login-with-gmail" onclick="window.location.href = '../Cultfit-project/Signup.html'">SIGN UP</div>
+        </div>
+    </div>
+
+
+
+
+    <!-- nav-popup-links -->
+
+    <div class="links-container">
+        <div id="dropdown-links">
+            <div id="grid-links">
+                <div>
+                    <a href="../cultFit-FoodStore/live.html">
+                        <img src="https://static.cure.fit/assets/images/Livefit.svg" alt="" width="38px">
+                        <div>
+                            <p>LIVE</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="../Cultfit-project/home_cult_cultCenters.html">
+                        <img src="https://static.cure.fit/assets/images/cult-icon.svg" alt="" width="38px">
+                        <div>
+                            <p>CULT</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="../Cultfit-project/mindfull.html">
+                        <img src="https://static.cure.fit/assets/images/mind-icon.svg" alt="" width="38px">
+                        <div>
+                            <p>MIND</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="../Cultfit-Care/labtests.html">
+                        <img src="https://static.cure.fit/assets/images/carefit-blk.svg" alt="" width="38px">
+                        <div>
+                            <p>CARE</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="cultsport.html">
+                        <img src="https://static.cure.fit/assets/images/store-icon.svg" alt="" width="38px">
+                        <div>
+                            <p>STORE</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="sliderimg">
+        <a href=""><img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/8a9a7929-35dd-4f32-a119-b9f5588406ff.png"
+                alt=""></a>
+    </div>
+    <div class="trial">
+        <a href=""><img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_1360:100/dpr_2/image/vm/3b64288a-de39-4a76-be06-f6c618c7ac2b.png"
+                alt=""></a>
+    </div>
+    <div class="countdown">
+        <a href="">
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_1360:100/dpr_2/image/vm/c009164d-032d-471e-bc84-cd4a9cd4ed23.png"
+                alt="">
+            <i class="fa fa-angle-right"
+                style="font-size:35px; font-weight: 800; margin-right: 15px; color:rgb(255,50,120); float: right;"></i>
+            <p id="timercountdown"></p>
+            <p class="hr">Hr &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Min &nbsp;&nbsp;&nbsp;&nbsp; Sec</p>
+        </a>
+    </div>
+    <div class="onlinetraining">
+        <h3>Online Personal Traning</h3>
+        <p>MEMBERSHIP</p>
+        <div class="beforeafter">
+            <hr>
+            <p>ENJOY THE BENEFITS OF</p>
+            <hr>
+        </div>
+        <div class="div2">
+            <p><img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/icons/livept/web/home.png"
+                    alt="">At Home Workouts</p>
+            <p><img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/icons/livept/web/cult.png"
+                    alt="">Personalized Workouts</p>
+            <p><img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/icons/livept/web/plan.png"
+                    alt="">Posture Correction</p>
+        </div>
+        <div class="cardcarousel">
+            Choose Your Subscription
+            <main>
+                <section>
+                    <a href="">
+                        <div class="div">
+                            <p>20 Sessions</p>
+                            <p>
+                            <h6 class="cut">₹ 29990</h6>
+                            <p style="margin-top: -20px;margin-left: 80px;">₹ 22990</p>
+                            </p>
+                            <p style="margin-top: -25px;margin-left: 280px;color: rgb(233, 30, 64);">BUY</p>
+                            <p style="color: gray;">240 Days Validity</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="div">
+                            <p>50 + 4 Sessions</p>
+                            <p>
+                            <h6 class="cut">₹ 23999</h6>
+                            <p style="margin-top: -20px;margin-left: 80px;">₹ 14490</p>
+                            </p>
+                            <p style="margin-top: -25px;margin-left: 280px;color: rgb(233, 30, 64);">BUY</p>
+                            <p style="color: gray;">150 Days Validity</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="div">
+                            <p>20 Sessions</p>
+                            <p>
+                            <h6 class="cut">₹ 12999</h6>
+                            <p style="margin-top: -20px;margin-left: 80px;">₹ 7990</p>
+                            </p>
+                            <p style="margin-top: -25px;margin-left: 280px;color: rgb(233, 30, 64);">BUY</p>
+                            <p style="color: gray;">90 Days Validity</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="div">
+                            <p>5 Sessions</p>
+                            <p>
+                            <h6 class="cut">₹ 3999</h6>
+                            <p style="margin-top: -20px;margin-left: 80px;">₹ 22990</p>
+                            </p>
+                            <p style="margin-top: -25px;margin-left: 280px;color: rgb(233, 30, 64);">BUY</p>
+                            <p style="color: gray;">30 Days Validity</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="div">
+                            <p>1 Sessions</p>
+                            <p>
+                            <h6 class="cut">₹ 990</h6>
+                            <p style="margin-top: -20px;margin-left: 80px;">₹ 49</p>
+                            </p>
+                            <p style="margin-top: -25px;margin-left: 280px;color: rgb(233, 30, 64);">BUY</p>
+                            <p style="color: gray;">Unlimited Validity</p>
+                        </div>
+                    </a>
+                </section>
+                <span>&#139;</span>
+                <span>&#155;</span>
+            </main>
+        </div>
+    </div>
+
+
+    <div class="keyfeatures">
+        <h2>KEY FEATURES</h2>
+        <div>
+            <div>
+                <img src="https://static.cure.fit/assets/images/QUALITY.svg" alt="">
+                <h4>Quality Trainers</h4>
+                <p>Premium quality Cult trainers to provide you best personal training experience</p>
+            </div>
+            <div>
+                <img src="https://static.cure.fit/assets/images/VIDEO.svg" alt="">
+                <h4>Convenience</h4>
+                <p>Workout anytime, anywhere with Live video sessions</p>
+            </div>
+            <div>
+                <img src="https://static.cure.fit/assets/images/PLAN.svg" alt="">
+                <h4>Personalized Journey</h4>
+                <p>Workouts tailored to your fitness level and goal</p>
+            </div>
+            <div>
+                <img src="https://static.cure.fit/assets/images/ATTENTION.svg" alt="">
+                <h4>Personal Attention</h4>
+                <p>Learn correct techniques, form and posture with feedback from your trainer</p>
+            </div>
+        </div>
+    </div>
+    <h3 class="workoutheading">WORKOUTS</h3>
+    <div class="workouts">
+        <a href="yogapose1.html">
+            <div class="img1">
+                <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/5_id/M_CLP_2020-02-04T13:17:17.179Z.png"
+                    alt="">
+                <p class="topleft">S&C</p>
+            </div>
+        </a>
+        <a href="yogapose2.html">
+            <div class="img1">
+                <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/98_id/M_CLP_2020-06-09T07:20:12.507Z.png"
+                    alt="">
+                <p class="topleft">Yoga</p>
+            </div>
+        </a>
+    </div>
+    <h3 class="workoutheading">CUSTOMER SPEAK</h3>
+    <div class="customerspeak">
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/w_52,ar_1,fl_progressive,f_auto,q_auto:eco/dpr_2/image/vm/823287af-32b7-42aa-a1e2-90e07bfc9707.jpg"
+                alt="">
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quia eos fuga perspiciatis repudiandae
+                    quod facilis
+                    sequi itaque velit! Accusamus debitis facilis ab atque adipisci eius aspernatur blanditiis possimus
+                    rem! Quae
+                    reprehenderit dolorum commodi minus, doloremque dicta optio, debitis soluta ipsa aperiam minima est
+                    vitae
+                    incidunt explicabo eveniet? Fugiat, sequi! <a href="">read more</a></p>
+                <h4>Bhalachandra</h4>
+            </div>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/w_52,ar_1,fl_progressive,f_auto,q_auto:eco/dpr_2/image/vm/4bb0c5c0-5c7c-43f5-88d5-d6819b051894.jpg"
+                alt="">
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quia eos fuga perspiciatis repudiandae
+                    quod facilis
+                    sequi itaque velit! Accusamus debitis facilis ab atque adipisci eius aspernatur blanditiis possimus
+                    rem! Quae
+                    reprehenderit dolorum commodi minus, doloremque dicta optio, debitis soluta ipsa aperiam minima est
+                    vitae
+                    incidunt explicabo eveniet? Fugiat, sequi! <a href="">read more</a></p>
+                <h4>Sunaina D.K.</h4>
+            </div>
+        </div>
+    </div>
+    <div class="quicklinks">
+        <h3>Quick Links</h3>
+        <a href="">
+            <p>Help & Support</p>
+        </a>
+        <hr>
+        <a href="http://static.cure.fit/terms.html">
+            <p>Terms and Conditions</p>
+        </a>
+        <hr>
+    </div>
+    <div class="info">
+        <div>
+            <div>
+                <h4>Online Personal Training</h4>
+                <p>More and more people are realizing the importance of staying fit and healthy. With a sedentary
+                    lifestyle becoming more
+                    of a norm these days, it has become essential to find time in your busy schedule for a physical
+                    workout. If you are on a
+                    time crunch, it might be difficult to squeeze out enough time to go to a training centre or a gym to
+                    get your workout
+                    done. This is where online personal training comes in handy. You do not need to waste any time
+                    commuting, yet still, get
+                    access to online personal training from the comfort of your home. An online personal training
+                    program constitutes
+                    undergoing training under the guidance of a certified personal trainer over a video call. The
+                    trainer will be able to
+                    guide you through the different workouts and keep an eye on whether or not you are following perfect
+                    form while working
+                    out. An Online Fitness Trainer is well versed in coaching clients online. You will be able to make
+                    the most of each
+                    session and burn a lot of calories as you put your body through a vigorous workout. One concern that
+                    most people have
+                    about joining an online personal training program is about investing in workout equipment.
+                    Fortunately, online fitness
+                    coaches are trained to design workout programs based on the workout equipment you have at home.
+                    Online training is a
+                    flexible and cost-effective way to reach your fitness targets without having to rely on the
+                    trainer’s location or
+                    availability.</p>
+            </div>
+            <div>
+                <h4>How Online Personal Training Works?</h4>
+                <p>Online personal training is a relatively new concept. Ever since its conception, more people have
+                    started switching to
+                    this type of training because of the many benefits it offers. Online training can be described as an
+                    exciting way to
+                    start training under the guidance of a certified personal trainer at a fraction of the cost without
+                    having to worry
+                    about the logistics or travel time. Most online coaching programs have different packages based on
+                    the difficulty level
+                    as well as the number of hours you will get with the coach. You can pick a package that meets your
+                    requirements. If you
+                    are a beginner, it is advisable to start with one of the basic packages and then top up as you get
+                    more proficient with
+                    the help of the online gym trainer. The packages will also give you an outline of what to expect,
+                    any equipment you
+                    might need, and so on. The number of sessions included in the package will also be mentioned. Once
+                    you choose a package,
+                    you can choose from the different time slots available. Log in on the chosen day and time and start
+                    working out. You
+                    will need to leave your video and microphone on in order to be able to communicate with the trainer
+                    during your
+                    sessions. The trainer will demonstrate the different workouts and keep a close eye on your posture
+                    and form. The trainer
+                    will also give you plenty of input on how you are doing. Basically, an online personal training
+                    program involves the
+                    following steps: Signing up for a Personal Training journey and choosing a pack of your choice.
+                    Setting your fitness
+                    goal and getting started accordingly. Choosing from the wide variety of available workouts.
+                    Following the guidance of
+                    the trainers. Achieving your goals with regular assessments and sessions. The initial sessions of
+                    most online personal
+                    training programs are less intense to help you ease your body into workout mode. As you attend more
+                    online sessions, you
+                    will notice that your body has built up stamina and can handle intense workout sessions with more
+                    ease. Since these
+                    Personal Training sessions are one on one, you can work out at your pace and benefit from the vast
+                    knowledge of the
+                    Online Personal Trainer you have chosen.</p>
+            </div>
+            <div>
+                <h4>What are the Benefits of Online Personal Training</h4>
+                <p>If you are still sceptical about hiring an online fitness coach, take a close look at some of the
+                    benefits offered by
+                    online training: Convenience: Since you do not need to reach any location to go ahead with your
+                    workout, online training
+                    sessions offer a lot more convenience when it comes to managing your schedule. Affordable:
+                    One-on-one sessions by gym
+                    trainers in person are often expensive. If you are not able to afford in-person training, online
+                    personal training can
+                    be a godsend. The sessions are a lot more affordable and yet offer the complete benefit of an
+                    in-person training
+                    session. Communication: Online Personal Trainers are more open to communication throughout the day.
+                    You can drop a text,
+                    call, or video call. Online personal trainers often check up on their clients routinely to encourage
+                    them to stick to a
+                    healthy diet and continue working out. No Geographical Boundaries: Online personal training sessions
+                    open up the
+                    opportunity for you to train under any of the top personal training experts in the country. You are
+                    no longer bound by
+                    geographical proximities when it comes to looking for an Online Personal Trainer. Motivation &
+                    Accountability: With your
+                    trainer just a click away, you will be motivated to stay on track and keep up with your workout
+                    routine and diet regime.
+                    You will also feel more accountable for your actions, helping you reach your fitness goals sooner
+                    rather than later.
+                    Tracking Results: Online Fitness Trainers will often track the different variables related to your
+                    body weight.
+                    This will give them a better idea of how to customize the program to help you achieve your target
+                    that does not harm
+                    your health.</p>
+            </div>
+            <div>
+                <h4>Best Online Fitness Trainers</h4>
+                <p>The most experienced online fitness trainers are those that can get you maximum results in minimum
+                    time without putting
+                    your health in jeopardy. With every person having a different tolerance level as well as a different
+                    set of
+                    requirements, it is essential to have a personal workout regimen. The same workout program may not
+                    work for everyone.
+                    Fortunately, with online fitness training programs within access, you can have your workouts
+                    tailored for you. Some of
+                    the specializations that online fitness trainers excel in include: Fat loss Functional training HIIT
+                    Cardio boxing
+                    Muscle building Post Pregnancy Workout Strength Training The top online gym trainers are well versed
+                    in creating
+                    customized workout routines to target your requirements. In fact, personal training is the best
+                    option if you are
+                    interested in body sculpting.</p>
+            </div>
+            <div>
+                <h4>What are the Features of Online Personal Training by Cult.fit</h4>
+                <p>Cult.fit is here to fill the gap of professional Online Fitness Trainers to give you access to
+                    Personal Training in the
+                    comfort of your home. Some of the features that make Cult.fit stand apart from our competitors are:
+                    Experienced Online
+                    Gym Trainers: Our team of personal trainers has plenty of experience in handling online sessions and
+                    providing plenty of
+                    support and encouragement to our clients. Convenience: The Personal Training package offered by
+                    Cult.fit allows you to
+                    workout anytime, anywhere. Personalized Journey: The Cult.fit workouts are tailored to your fitness
+                    levels and targets.
+                    Personal Attention: The Online Fitness Trainers at Cult.fit will teach you about the correct
+                    techniques, form as well as
+                    posture. The journey towards fitness requires persistence and hard work. Cult.fit is here to help
+                    you stay on track and
+                    with our affordable online personal training sessions. All you need is good internet connectivity,
+                    audio, and camera
+                    permissions to go ahead. You will soon start seeing a noticeable difference in your stamina and body
+                    strength.</p>
+            </div>
+            <div class="bold">
+                <h4>Top Searches</h4>
+                <p>Fitness</p>
+                <p>Weight Loss | Six Pack Abs | Cardio Exercise | HIIT Workout | Belly Fat Exercises | Exercise For Kids
+                    | Lean Muscle |
+                    Hrx Workout | Exercise | Handstand Push Up | Online Yoga Classes | Gym Near Me | Online Fitness
+                    Trainer | How To
+                    Increase Stamina</p>
+                <p>Mindfulness</p>
+                <p>Weight Loss | Six Pack Abs | Cardio Exercise | HIIT Workout | Belly Fat Exercises | Exercise For Kids
+                    | Lean Muscle |
+                    Hrx Workout | Exercise | Handstand Push Up | Online Yoga Classes | Gym Near Me | Online Fitness
+                    Trainer | How To
+                    Increase Stamina</p>
+                <p>Online Doctor Consultation & Diagnostic Tests</p>
+                <p>Dentist Near Me | Gynaecologist Near Me | Dermatologist Near Me | Endocrinologist Near Me |
+                    Pulmonologist Near Me |
+                    Cardiologist Near Me | Orthopedist Doctor Near Me | Thyroid Test | Pregnancy Test | Full Body
+                    Checkup | Kidney Function
+                    Test | Therapist Near Me | Online Counselling | Physiotherapist Near Me</p>
+                <p>Healthy Recepies</p>
+                <p>Sambar | Masala Dosa | Kadai Paneer | Manchow Soup | Chicken Soup | Paneer Masala | Chicken Keema |
+                    Badam Milk | Aloo
+                    Tikki Chaat | Moong Dal Kachori | Rasmalai | Pav Bhaji | Hummus | Chocolate Ice Cream | Mango Ice
+                    Cream | Mango Cake |
+                    Paneer | Macaroons | Chicken Biryani | Shawarma</p>
+            </div>
+            <div>
+                <h4>Types of Gyms by Cult.fit</h4>
+                <p>Swimming Pools Near Me | Outdoor Gyms | Football Training near me | Zumba Classes Near Me | Boxing
+                    Classes Near Me |
+                    Gyms with Personal Trainer</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <div id="footer-container">
+            <div id="footer-part-1">
+                <div id="footer-details">
+                    <div><img src="https://static.cure.fit/assets/images/cult-logo-white.svg" alt="" width="126"
+                            height="42"></div>
+                    <div class="description">
+                        At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy
+                        with yoga & meditation, and medical & lifestyle care hassle-free. #BeBetterEveryDay
+                    </div>
+                </div>
+
+                <ul>
+                    <li><a href="#" target="_blank">CONTACT US</a></li>
+                    <li><a href="#" target="_blank">BLOG</a></li>
+                    <li><a href="#" target="_blank">PARTNER.FIT</a></li>
+                    <li><a href="#" target="_blank">TALKS</a></li>
+                    <li><a href="#" target="_blank">CAREERS</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#" target="_blank">CULTFIT FOR BUSINESSES</a></li>
+                    <li><a href="#" target="_blank">CULT FRANCHISE</a></li>
+                    <li><a href="#" target="_blank">CULT PASS NETWORK</a></li>
+                    <li><a href="#" target="_blank">CORPORATE PARTNERSHIPS</a></li>
+                </ul>
+
+                <ul>
+                    <li class="footer-app-information"><img src="https://static.cure.fit/assets/images/app-store.svg"
+                            alt="" width="80%" onclick="applestore()"></li>
+                    <li class="footer-app-information"><img src="https://static.cure.fit/assets/images/play-store.svg"
+                            alt="" width="80%" onclick="playsotre()"></li>
+                </ul>
+            </div>
+
+            <div id="important-links">
+                <div>RELATED SEARCHES</div>
+                <hr color="#A2A2A2">
+                <div id="important-links-list">
+                    <ul>
+                        <li><a href="#">Gym Near Me</a></li>
+                        <li><a href="#">Consult Nutritionist Online</a></li>
+                        <li><a href="#">Chest Exercises at Home</a></li>
+                        <li><a href="#">Stress Management</a></li>
+                        <li><a href="#">Mindfulness Meditation</a></li>
+                        <li><a href="#">Gyms in Mumbai</a></li>
+                        <li><a href="#">Gyms in Kolkata</a></li>
+                        <li><a href="#">Home Workouts</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Online Personal Training</a></li>
+                        <li><a href="#">Consult Gynecologist Online</a></li>
+                        <li><a href="#">Fat Burning Exercises</a></li>
+                        <li><a href="#">Yoga Asanas</a></li>
+                        <li><a href="#">Yoga Nidra</a></li>
+                        <li><a href="#">Gyms in Delhi</a></li>
+                        <li><a href="#">Gyms in Ahmedabad</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Online Doctor Consultation</a></li>
+                        <li><a href="#">Diagnostic tests</a></li>
+                        <li><a href="#">Six Pack Workout</a></li>
+                        <li><a href="#">Meditation Music</a></li>
+                        <li><a href="#">Dermatologist online</a></li>
+                        <li><a href="#">Gyms in Pune</a></li>
+                        <li><a href="#">Gyms in Chandigarh</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Therapist consultation</a></li>
+                        <li><a href="#">Food Near Me</a></li>
+                        <li><a href="#">Yoga Postures for Beginners</a></li>
+                        <li><a href="#">Pranayama</a></li>
+                        <li><a href="#">Othopedist doctor near me</a></li>
+                        <li><a href="#">Gyms in Hydrabad</a></li>
+                        <li><a href="#">Gyms in Indore</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Online Fitness Classes</a></li>
+                        <li><a href="#">Healthy Recipes</a></li>
+                        <li><a href="#">Surya Namaskar for Beginners</a></li>
+                        <li><a href="#">Bedtime Stories for Kids</a></li>
+                        <li><a href="#">Manchow Soup</a></li>
+                        <li><a href="#">Gyms in Chennai</a></li>
+                        <li><a href="#">Gyms in Coimbatore</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Consult Cardiologist Online</a></li>
+                        <li><a href="#">Reduce Belly Fat</a></li>
+                        <li><a href="#">Yoga for Stress Relief</a></li>
+                        <li><a href="#">Meditation in Hindi</a></li>
+                        <li><a href="#">Badam Milk</a></li>
+                        <li><a href="#">Gyms in Jaipur</a></li>
+                        <li><a href="#">Gyms in Bangalore</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div id="contact-links">
+                    <div><a href="#">Contact us</a></div>
+                    <div><a href="#">FAQ</a></div>
+                    <div><a href="#">Terms and Condition</a></div>
+                    <div><a href="#">Privacy Policy</a></div>
+                    <div><a href="#">Refund Policy</a></div>
+                </div>
+                <div id="icons">
+                    <a href="https://www.youtube.com/channel/UCSE72IaHOL-1Tv-m3JHE4Cg" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/cultfitOfficial/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/cultfitOfficial" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/BeCureFit/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Location popup bar -->
+
+    <div id="location-popup">
+        <div id="location-popup-heading">Select your Location</div>
+        <div id="location-popup-city">
+            <div id="location-popup-city-header">POPULAR CITY</div>
+            <div id="top-city-locations">
+                <div onclick="locationUpdate(id)" id="Bangalore">
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/blr_new.png"
+                        width="60px" alt="">
+                    <div>Bangalore</div>
+                </div>
+                <div onclick="locationUpdate(id)" id="Delhi NCR">
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/ncr_new.png"
+                        width="60px" alt="">
+                    <div>Delhi NCR</div>
+                </div>
+                <div onclick="locationUpdate(id)" id="Hyderabad">
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/hyd_new.png"
+                        width="60px" alt="">
+                    <div>Hyderabad</div>
+                </div>
+                <div onclick="locationUpdate(id)" id="Mumbai">
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/mumbai_selected.png"
+                        width="60px" alt="">
+                    <div>Mumbai</div>
+                </div>
+            </div>
+            <div id="location-popup-city-header">OTHER CITY</div>
+            <div>
+                <ul>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Chennai">Chennai</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Visakhapatnam">Visakhapatnam</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Jaipur">Jaipur</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Vadodara">Vadodara</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Pune">Pune</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Kolkata">Kolkata</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Ahmedabad">Ahmedabad</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Mysore">Mysore</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Chandigarh Tricity">Chandigarh Tricity</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Kota">Kota</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Kochi">Kochi</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Ludhiana">Ludhiana</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Surat">Surat</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Jammu">Jammu</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Amritsar">Amritsar</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Indore">Indore</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Coimbatore">Coimbatore</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Manglore">Manglore</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Bhopal">Bhopal</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Nagpur">Nagpur</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Kanpur">Kanpur</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Agra">Agra</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Lucknow">Lucknow</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Other">Other</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------------- User Information ---------------->
+
+    <div id="user-info-popup">
+        <div onclick="window.location.href ='../Cultfit-project/userProfile.html'"><i class="fas fa-user"></i> Profile
+        </div>
+        <hr>
+        <div onclick="window.location.href ='../Cultfit-project/userSupport.html'"><i class="fas fa-headset"></i>
+            Support</div>
+        <hr>
+        <div onclick="window.location.href ='../Cultfit-project/userAccount.html'"><i class="fas fa-cog"></i> Account
+        </div>
+        <hr>
+        <div onclick="logout()"><i class="fas fa-sign-out-alt"></i> Log out</div>
+    </div>
+    <script src="onlinept.js"></script>
+</body>
+
+</html>
+
+
+<script>
+    var span = document.getElementsByTagName('span');
+    var div = document.getElementsByClassName('div');
+    var l = 0;
+    span[2].onclick = () => {
+        l++;
+        for (var i of div) {
+            if (l == 0) { i.style.left = "0px"; }
+            if (l == 1) { i.style.left = "-370px"; }
+            if (l == 2) { i.style.left = "-740px"; }
+            if (l > 2) { l = 2; }
+        }
+    }
+    span[1].onclick = () => {
+        l--;
+        for (var i of div) {
+            if (l == 0) { i.style.left = "0px"; }
+            if (l == 1) { i.style.left = "-370px"; }
+            if (l == 2) { i.style.left = "-740px"; }
+            if (l < 0) { l = 0; }
+        }
+    }
+</script>

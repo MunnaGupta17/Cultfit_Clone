@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cult.fit - health food | fitness | meditation</title>
+    <script src="https://kit.fontawesome.com/7e153de9b5.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://static.cure.fit/assets/images/curefit-v-man.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+    <!--nav start -->
+    <!----------- Nav bar ----------->
+
+    <div class="container" id="blur">
+        <div id="nav-bar">
+            <nav>
+                <div class="nav-grid">
+                    <div id="logo">
+                        <a href="../Cultfit-project/Home.html">
+                            <div id="logo-img">
+                                <img src="https://static.cure.fit/assets/images/curefit-v-man.svg" alt="" width="38px">
+                            </div>
+                        </a>
+                        <a href="../Cultfit-project/Home.html">
+                            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/image/header-web/live-fit.svg"
+                                alt="">
+                        </a>
+                        <a href="#dropdown">
+                            <img src="https://static.cure.fit/assets/images/arrow-clp.svg" alt="" id="rotateDropDown"
+                                onclick="dropdowneffect(id)">
+                        </a>
+                    </div>
+                    <div id="nav-links">
+                        <ul>
+                            <li><a href="live.html">Fitness</a></li>
+                            <li><a href="mindfulness.html">Mindfulness</a></li>
+                            <li><a href="foodhub.html">Food Hub</a></li>
+                            <!-- <li><a href="#">Cultsport</a></li> -->
+                        </ul>
+                    </div>
+                    <div id="nav-bar-right">
+                        <div id="nav-bar-right-items">
+                            <div id="location" onclick="displayLocation(id)">
+                                <a href="#location">
+                                    <div id="location-circle"></div>
+                                </a>
+                                <a href="#location">
+                                    <div id="change-location-navbar">Hyderabad</div>
+                                </a>
+                            </div>
+                            <div id="login">
+                                <div id="login-logo">
+                                    <a href="#login" onclick="fetchLoginPage()"><img
+                                            src="https://static.cure.fit/assets/images/user-image.svg" alt=""></a>
+                                </div>
+                                <a href="#login" onclick="fetchLoginPage()">
+                                    <div id="login-text">Login</div>
+                                </a>
+                            </div>
+                            <div id="cart">
+                                <a href="../Cultfit-Store/cartPage.html">
+                                    <img src="https://static.cure.fit/assets/images/cart-image.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- Login page -->
+
+    <div id="login-page">
+        <div id="close-button">
+            <button onclick="window.location.href = 'live.html'"><span>X</span></button>
+        </div>
+        <div id="login-logo-popup">
+            <div><img src="https://static.cure.fit/assets/images/curefit_login_logo.svg" alt=""></div>
+            <img src="https://static.cure.fit/assets/images/cult_name.svg" alt="">
+        </div>
+        <div id="login-input-container">
+            <div id="login-input">Phone Number<br />
+                <input type="number" placeholder="Enter your mobile number" id="login-phone">
+            </div>
+            <div id="login-input">Password<br />
+                <input type="password" placeholder="Enter your Password" id="login-password">
+                <i class="far fa-eye-slash" id="togglePassword" onclick="showHidePassword(id)"></i>
+            </div>
+        </div>
+        <div id="submit-login">
+            <button class="input-login-box" onclick="verifyLogin()">Continue</button>
+        </div>
+        <div class="TnC-check">
+            <div>By Continuing you agree to the
+                <a href="https://static.cult.fit/terms_cult.html" target="_blank">Terms of Services</a>
+                and <a href="https://static.cult.fit/privacy_cult.html" target="_blank">Privacy policy</a>
+            </div>
+        </div>
+        <div>
+            <div id="login-with-gmail" onclick="window.location.href = '../Cultfit-project/Signup.html'">SIGN UP</div>
+        </div>
+    </div>
+
+
+    <!--------------- User Information ---------------->
+
+    <div id="user-info-popup">
+        <div onclick="window.location.href ='../Cultfit-project/userProfile.html'"><i class="fas fa-user"></i> Profile</div>
+        <hr>
+        <div onclick="window.location.href ='../Cultfit-project/userSupport.html'"><i class="fas fa-headset"></i> Support</div>
+        <hr>
+        <div onclick="window.location.href ='../Cultfit-project/userAccount.html'"><i class="fas fa-cog"></i> Account</div>
+        <hr>
+        <div onclick="logout()"><i class="fas fa-sign-out-alt"></i> Log out</div>
+    </div>
+
+
+
+
+    <!-- nav-popup-links -->
+
+    <div class="links-container">
+        <div id="dropdown-links">
+            <div id="grid-links">
+                <div>
+                    <a href="#">
+                        <img src="https://static.cure.fit/assets/images/Livefit.svg" alt="" width="38px">
+                        <div>
+                            <p>LIVE</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="../Cultfit-project/home_cult_cultCenters.html">
+                        <img src="https://static.cure.fit/assets/images/cult-icon.svg" alt="" width="38px">
+                        <div>
+                            <p>CULT</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="../Cultfit-project/mindfull.html">
+                        <img src="https://static.cure.fit/assets/images/mind-icon.svg" alt="" width="38px">
+                        <div>
+                            <p>MIND</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="../Cultfit-Care/online_consult.html">
+                        <img src="https://static.cure.fit/assets/images/carefit-blk.svg" alt="" width="38px">
+                        <div>
+                            <p>CARE</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="../Cultfit-Store/cultsport.html">
+                        <img src="https://static.cure.fit/assets/images/store-icon.svg" alt="" width="38px">
+                        <div>
+                            <p>STORE</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Location popup bar -->
+
+    <div id="location-popup">
+        <div id="location-popup-heading">Select your Location</div>
+        <div id="location-popup-city">
+            <div id="location-popup-city-header">POPULAR CITY</div>
+            <div id="top-city-locations">
+                <div onclick="locationUpdate(id)" id="Bangalore">
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/blr_new.png"
+                        width="60px" alt="">
+                    <div>Bangalore</div>
+                </div>
+                <div onclick="locationUpdate(id)" id="Delhi NCR">
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/ncr_new.png"
+                        width="60px" alt="">
+                    <div>Delhi NCR</div>
+                </div>
+                <div onclick="locationUpdate(id)" id="Hyderabad">
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/hyd_new.png"
+                        width="60px" alt="">
+                    <div>Hyderabad</div>
+                </div>
+                <div onclick="locationUpdate(id)" id="Mumbai">
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_50,h_50,ar_1/dpr_2/image/cities/mumbai_selected.png"
+                        width="60px" alt="">
+                    <div>Mumbai</div>
+                </div>
+            </div>
+            <div id="location-popup-city-header">OTHER CITY</div>
+            <div>
+                <ul>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Chennai">Chennai</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Visakhapatnam">Visakhapatnam</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Jaipur">Jaipur</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Vadodara">Vadodara</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Pune">Pune</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Kolkata">Kolkata</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Ahmedabad">Ahmedabad</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Mysore">Mysore</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Chandigarh Tricity">Chandigarh Tricity</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Kota">Kota</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Kochi">Kochi</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Ludhiana">Ludhiana</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Surat">Surat</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Jammu">Jammu</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Amritsar">Amritsar</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Indore">Indore</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Coimbatore">Coimbatore</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Manglore">Manglore</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Bhopal">Bhopal</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Nagpur">Nagpur</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Kanpur">Kanpur</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Agra">Agra</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Lucknow">Lucknow</a></li>
+                    <li><a href="#" onclick="locationUpdate(id)" id="Other">Other</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- nav end  -->
+
+    <!-- slider -->
+    <div id="img-scroll">
+        <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/38aec081-79da-44e8-8af2-17f6a8ed929e.png"
+            alt="">
+        <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/8d617a97-7613-48c9-9540-a3a1f142d71e.jpg"
+            alt="">
+        <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/9a32cbd5-0c7d-44ef-9920-300e1d6a7882.png"
+            alt="">
+    </div>
+    <!-- slider end -->
+
+    <div class="timer">
+        <div
+            style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_1360:100/dpr_2/image/vm/d148755f-0252-436a-b54e-e6ae6d47e800.png);">
+        </div>
+        <div id="clock"></div>
+
+    </div>
+
+
+    <div class="first-box">
+        <div class="">
+            <div class="f-img"
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_380,h_238,ar_1.59/dpr_2/image/diy/fd0e190c-f9d2-4527-b5a6-0ad775aa235b);">
+            </div>
+            <div class="f-text">
+                <div>
+                    <div>
+                        <div>Dance: Quick Burn</div>
+                        <div>by Anurag | BEGINNER</div>
+
+
+                    </div>
+                    <div>15 Min</div>
+                </div>
+                <div class="fbox-btt">
+                    <button>02:00</button>
+                    <button>05:00</button>
+                    <button>More</button>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="f-img"
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_380,h_238,ar_1.59/dpr_2/image/diy/f7be2d49-16a7-43c8-a896-766b181a0797);">
+            </div>
+            <div class="f-text">
+                <div>
+                    <div>
+                        <div>Dance: Quick Burn</div>
+                        <div>by Anurag | BEGINNER</div>
+
+
+                    </div>
+                    <div>15 Min</div>
+                </div>
+                <div>
+                    <button>02:00</button>
+                    <button>05:00</button>
+                    <button>More</button>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="f-img"
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_380,h_238,ar_1.59/dpr_2/image/diy/5f8f23d2-8b43-434f-9184-7a2fe8b63628);">
+            </div>
+            <div class="f-text">
+                <div>
+                    <div>
+                        <div>Dance: Quick Burn</div>
+                        <div>by Anurag | BEGINNER</div>
+
+
+                    </div>
+                    <div>15 Min</div>
+                </div>
+                <div class="fbox-btt">
+                    <button>02:00</button>
+                    <button>05:00</button>
+                    <button>More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="timer">
+        <div
+            style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_1360:100/dpr_2/image/vm/d148755f-0252-436a-b54e-e6ae6d47e800.png);">
+        </div>
+        <div id="clock"></div>
+
+    </div> -->
+
+    <div class="Second">
+        <div class="heading">
+            <h3>5 Must Try Workouts</h3>
+        </div>
+        <div class="Seconddisplay">
+            <div class="must-try" onclick="fetchLoginPage()"
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/bdd86d94-48c3-4e90-8bca-754637c0213b);">
+                <div>Dance & Burn</div>
+                <div>25 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div class="must-try" onclick="fetchLoginPage()"
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/5b83cef1-3ed1-4004-b581-7666a9c9067f);">
+                <div>Core Yoga</div>
+                <div>30 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div class="must-try" onclick="fetchLoginPage()"
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/910614dd-bce7-4db4-9e73-16bc7c3a5a0f);">
+                <div>Calori Crush</div>
+                <div>30 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div class="must-try" onclick="fetchLoginPage()"
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/e32f7bfe-8c87-4dcb-b158-1f91f8e52459);">
+                <div>Belly Burner</div>
+                <div>30 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div id="login-page">
+                <div id="close-button">
+                    <button onclick="window.location.href = 'secpage.html'"><span>X</span></button>
+                </div>
+                <div id="login-logo-popup">
+                    <div><img src="https://static.cure.fit/assets/images/curefit_login_logo.svg" alt=""></div>
+                    <img src="https://static.cure.fit/assets/images/cult_name.svg" alt="">
+                </div>
+                <div id="login-input-container">
+                    <div id="login-input">+91
+                        <img src="https://static.cure.fit/assets/images/arrow-clp.svg" alt="">
+                        <input type="number" placeholder="Enter your mobile number" id="input-size">
+                    </div>
+                </div>
+                <div id="submit-login">
+                    <button class="input-login-box">Continue</button>
+                </div>
+                <div class="TnC-check">
+                    <div>By Continuing you agree to the
+                        <a href="https://static.cult.fit/terms_cult.html" target="_blank">Terms of Services</a>
+                        and <a href="https://static.cult.fit/privacy_cult.html" target="_blank">Privacy policy</a>
+                    </div>
+                </div>
+                <div>
+                    <div id="login-with-gmail">Continue with
+                        <i class="fab fa-google"></i>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="far fa-envelope"></i>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="heading">
+            <h3> Workouts by Format
+            </h3>
+        </div>
+        <div class="Seconddisplay">
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/2e5008bd-9e06-40ad-96d8-cd1a7df156a1);">
+                <div>Wallk Fitness</div>
+                <div>29 Sessions</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/1c4b0c6f-c6d9-4825-8512-05320a225233);">
+                <div>Dance Fitness</div>
+                <div>75 Sessions</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/57aa742d-751d-4d80-a250-75d67b5d5290);">
+                <div>Calori Crush</div>
+                <div>52 Sessions</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/4d02e22c-d52c-4f2b-b911-4bf8656c7d01);">
+                <div>Belly Burner</div>
+                <div>66 Sessions</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+
+        </div>
+        <div class="heading">
+            <h3>Belly Burn Workouts</h3>
+        </div>
+        <div class="Seconddisplay">
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/b9a4b82c-48e6-4e8f-a5c8-68b38743c411);">
+                <div>Abs Smash</div>
+                <div>25 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/38a03373-4da7-4634-a9e0-74153e7671f3);">
+                <div>Core Conditioning</div>
+                <div>30 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/2487b64f-5a25-4f37-b9b1-8db7626ffcae);">
+                <div>Hill: Belly Burn</div>
+                <div>30 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/e8bb12cc-50f0-4a6b-a908-e78a319de151);">
+                <div>Fit 30:Belly Burner</div>
+                <div>30 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+
+        </div>
+        <div class="heading">
+            <h3>Workouts by Trainer</h3>
+        </div>
+        <div class="Seconddisplay">
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/1b65d839-66aa-459a-b507-444d027bb63e);">
+                <div>HIIT With Olivia</div>
+                <div>20 Sessions</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/231dd776-b734-4201-9fb1-890a7f5a837b);">
+                <div>Groove With Tom</div>
+                <div>20 Sessions</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/04976847-097b-48eb-be47-0de77260f97b);">
+                <div>Daliy Youga with Anil</div>
+                <div>30 Sessions</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/889333ce-4748-43b5-969e-8bc06a639182);">
+                <div>Dance with Simran</div>
+                <div>30 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+
+        </div>
+        <div class="heading">
+            <h3> Calories
+            </h3>
+        </div>
+        <div class="Seconddisplay">
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/766ba814-34f0-475d-a5ae-fedac6928fb3);">
+                <div>Cardio Tone & Dance</div>
+                <div>25 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/d2018f1d-8d6d-4fc3-b802-7f6519db0e38);">
+                <div>Dance:Bolly Punjabi</div>
+                <div>30 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/8c12b448-3e7b-4abf-b6c0-19b0b6ee287e);">
+                <div>Beginner Cardio Dance</div>
+                <div>30 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+            <div
+                style="background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/w_300,ar_1.77,c_fill,fl_progressive,f_auto,q_auto:eco/dpr_2/image/diy/efb6011f-ebc8-4797-915f-ebe4f89a50cb);">
+                <div>Dance For Joy #6</div>
+                <div>30 Mins</div>
+                <div><img src="https://static.cure.fit/assets/images/play_button@1x.svg" alt=""> </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="thirshead">Workout Collection</div>
+    <div class="third">
+
+
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/242290e4-3a59-463c-9c7b-e21bd14b434e"
+                alt="img">
+            <h1>Workout for Beginners</h1>
+            <p>Get started with fitness! These guided workouts aim at helping you start exercising daily with very
+                simple and
+                easy-to-do exercises.</p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/db8fdf60-64c0-4938-9d9a-4fac5fb076d9"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/19d81eab-d659-44d8-8466-52a2fb6744c2"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/7efeed85-19dc-4a56-93e7-a5668ead0073.jpg"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/e2e5a7d7-6352-47f6-a48c-f72ec2c42412"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/57054865-0ce0-4572-976a-19b19385f48d"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/1965d35b-6337-4606-bb57-6ac094d64b98"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/fd9fd7e3-5182-484a-9b30-f04d7c15d25f"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/9942f630-422b-4760-86a2-d5d1db02437f.jpg"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/4f734a62-23b9-40d8-9fd9-85b88dbd14ae"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/867fb6bd-d196-45c3-bad8-13a066ff4af1"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/b7ba58ad-5007-443b-9e9a-b272f55b4695"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/d8267dbd-680f-4c2e-a0a0-d83940098ea4"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/f8631226-c13e-415d-b975-9e669bcc2eaf"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/28e2615f-8a96-4f23-a484-ebbb56e6d572"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/fda65e42-b721-4ac6-a678-7ac61e0ac919"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/8292b5fb-1db8-4979-95d1-2059c07d1512"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/45d2fc65-3b04-4e0e-9c05-31d03e1a84dd"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/47646b49-dc78-49b9-aa9a-700c050415ed"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/4b4f7768-16cf-4e0d-9537-c9b1d7861b9b"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/ed92c997-5f86-4723-a1b8-586ca0a76176"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/c97f0006-4e0b-4321-9a63-c0fd48ccd820"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/841bc428-5380-4e34-8d8b-f0dd5813b445"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/bb3f08c1-0da4-4c82-b393-17d809b4c105"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/7fb7bb7e-678a-4cd7-8feb-5ca82e6e6d9d"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/e48cc287-1493-4e6f-a24a-8459db66a795"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/4624d16a-12fc-4bbe-8af7-d13ee24b6e5e.jpg"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/6f999927-8584-48d1-90e8-061f0274a8aa"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/07abe938-a825-4603-a3d3-9515b9d69947"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/ded936d6-e7e4-4fde-87e2-89eb3863ff6c"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/e3d5b684-ba56-444d-a1c4-dd6bc323290a"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/2794a3f9-941a-4a35-82ae-59bf1288f114"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/9d87d91e-d264-4151-9c56-40b3236aedb6"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/63ca2e5e-b1a0-4901-96a1-e39ba9661a0a.jpg"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/f625d5e2-f614-476f-af11-23723aa18f13"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/3fcd1017-e2ab-48d8-b56a-a72fdafd5418"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/a7b86130-ce4d-494f-b184-642d441567c1"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/4447c1f4-1764-4899-993d-0acf63ac95d4"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+        <div> <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_163,ar_0.79,c_fit/dpr_2/image/diy/8d9dc759-0cb9-4c65-86ab-597d088343b6"
+                alt="img">
+            <h1>Dumbbell Workouts Collection</h1>
+            <p>A collection of dumbbell workouts by your favorite trainers specific to particular muscle group.
+            </p>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="Quick-Links">
+        <div>Quick Links</div>
+        <button><a href="">Help & Support</a></button>
+        <hr>
+        <button><a href="">Terms and Conditions</a></button>
+        <hr>
+
+
+    </div>
+    <div class="imgcard faq">
+        <div class="top">
+            <div>
+                <h1>FAQS</h1>
+                <p>7 QUESTIONS</p>
+            </div>
+            <div>
+                <a href="">SEE ALL</a>
+            </div>
+        </div>
+        <button class="accordion">
+            <li>What are LIVE Classes on cult.live?</li>
+        </button>
+        <div class="panel">
+            <p>LIVE classes let you experience the energy of a group fitness class, led by star trainers from the
+                comfort of your home.
+                We currently offer LIVE classes across fitness formats like strength, cardio, HRX, S&C and yoga across
+                all 7 days of the
+                week. Most of the classes feature bodyweight workouts which means you won’t need equipment and free
+                weights. LIVE
+                classes are safe for all types of users - beginner, intermediate and advanced. In case you are suffering
+                through an
+                injury, chronic pain or medical condition, we recommend checking with a medical expert before attending
+                LIVE classes. To
+                make the most of these classes, we recommend using the Energy Meter feature that will give real-time
+                feedback on your
+                workout and help you compete with others working out with you. You will get a detailed report of your
+                energy score and
+                class rank at the end of a session. To get started, all you need is good internet connection (a minimum
+                2 MBps
+                connection), an adequately charged device and a pair of comfortable shoes (needed for a few workouts).
+            </p>
+            <p>Do you find this helpful? <span><a href=""> YES </a></span><span><a href=""> NO</a></span></p>
+        </div>
+        <hr>
+
+        <button class="accordion">
+            <li>What is a cultpass LIVE?</li>
+        </button>
+        <div class="panel">
+            <p>cultpass LIVE gives you unlimited access to all LIVE classes and DIY (on demand) sessions. This includes
+                unlimited
+                access to fitness, dance, meditation, health video content and podcasts. A cultpass LIVE member has an
+                all access pass
+                to celebrity masterclasses, ability to workout with friends and track their energy scores, and monitor
+                their progress in
+                the form of reports. You can purchase the membership through the official cult.fit website or on the
+                android app.</p>
+            <p>Do you find this helpful? <span><a href=""> YES </a></span><span><a href=""> NO</a></span></p>
+        </div>
+        <hr>
+
+        <button class="accordion">
+            <li>Are there any trial sessions for cultpass LIVE? Where can I check my eligibility?</li>
+        </button>
+        <div class="panel">
+            <p>cultsport is a premium workout wear brand from the house of cure.fit. cultsport offers a variety of
+                premium
+                workout and
+                sports gear that helps fitness enthusiasts and everyday athletes up their daily fitness game and look
+                good while
+                they
+                are at it. With a goal to bring top notch products with a foot forward in fashion, longevity and
+                functionality,
+                cultsport attempts at bringing the best performing apparel, footgear and accessories ideal for all
+                workout
+                formats. Read
+                here to know in detail how cultsport is designed to enhance your workout here.</p>
+            <p>Do you find this helpful? <span><a href=""> YES </a></span><span><a href=""> NO</a></span></p>
+        </div>
+        <hr>
+        <button class="accordion">
+            <li>What are the services accessible to a cultpass LIVE member?</li>
+        </button>
+        <div class="panel">
+            <p>cultsport is a premium workout wear brand from the house of cure.fit. cultsport offers a variety of
+                premium
+                workout and
+                sports gear that helps fitness enthusiasts and everyday athletes up their daily fitness game and look
+                good while
+                they
+                are at it. With a goal to bring top notch products with a foot forward in fashion, longevity and
+                functionality,
+                cultsport attempts at bringing the best performing apparel, footgear and accessories ideal for all
+                workout
+                formats. Read
+                here to know in detail how cultsport is designed to enhance your workout here.</p>
+            <p>Do you find this helpful? <span><a href=""> YES </a></span><span><a href=""> NO</a></span></p>
+        </div>
+        <hr>
+        <button class="accordion">
+            <li>What are the types of workouts featured in LIVE classes?</li>
+        </button>
+        <div class="panel">
+            <p>cultsport is a premium workout wear brand from the house of cure.fit. cultsport offers a variety of
+                premium
+                workout and
+                sports gear that helps fitness enthusiasts and everyday athletes up their daily fitness game and look
+                good while
+                they
+                are at it. With a goal to bring top notch products with a foot forward in fashion, longevity and
+                functionality,
+                cultsport attempts at bringing the best performing apparel, footgear and accessories ideal for all
+                workout
+                formats. Read
+                here to know in detail how cultsport is designed to enhance your workout here.</p>
+            <p>Do you find this helpful? <span><a href=""> YES </a></span><span><a href=""> NO</a></span></p>
+        </div>
+        <hr>
+        <button class="accordion">
+            <li>What is cultsport and what does it offer?</li>
+        </button>
+        <div class="panel">
+            <p>cultsport is a premium workout wear brand from the house of cure.fit. cultsport offers a variety of
+                premium
+                workout and
+                sports gear that helps fitness enthusiasts and everyday athletes up their daily fitness game and look
+                good while
+                they
+                are at it. With a goal to bring top notch products with a foot forward in fashion, longevity and
+                functionality,
+                cultsport attempts at bringing the best performing apparel, footgear and accessories ideal for all
+                workout
+                formats. Read
+                here to know in detail how cultsport is designed to enhance your workout here.</p>
+            <p>Do you find this helpful? <span><a href=""> YES </a></span><span><a href=""> NO</a></span></p>
+        </div>
+
+
+
+    </div>
+    <div class="bs">
+        <div>BE SPIRITED</div>
+        <div>FEARLESS</div>
+        <div>AN EVERYDAY ATHLETE.</div>
+    </div>
+    <div class="ditels">
+        <div>
+            <h2>Exercises</h2>
+            <p>Exercise enhances or maintains the overall wellness of the body. It supports physical fitness and health.
+                People perform
+                home exercise to improve strength, develop muscles, lose weight, aid growth, and prevent ageing. One
+                should always keep
+                in mind that spending some time on daily fitness is better than not doing anything.</p>
+        </div>
+        <div>
+            <h2>What does Fitness Mean?</h2>
+            <p>Fitness is a form of good health of the body where an individual is physically and mentally fit. The main
+                objective of
+                fitness is to provide ample energy with less fatigue and the resilience to efficiently perform tasks in
+                our regular
+                routines.</p>
+        </div>
+        <div>
+            <h2>What is Exercise/Workout?</h2>
+            <p>Physical exercise burns calories and helps in maintaining weight or prevents weight gain. Home exercise
+                is essential to
+                everybody right from when they are small as they develop motor skills and help with their performance
+                later in life. It
+                allows an individual to perform well in sports later and in other activities that include physical
+                fitness. Performing
+                exercise regularly helps people develop good mental health to fight depression and have a positive
+                outlook. Workout acts
+                as a most excellent stress reliever to fight the numerous problems in our daily lives. Home exercise
+                will help a person
+                handle his/her daily chores with more energy as it improves both heart and lung health. Workout delivers
+                oxygen to all
+                the tissues and provides nutrients to all parts of the body. Home workout boosts the endurance levels in
+                the body.
+                Workout promotes better and in-depth sleep. Hence people who have sleep issues should start prioritizing
+                fitness and
+                exercises. Home workout reasonably lifts the emotions and makes us feel brisk throughout the day. This
+                is because they
+                stimulate brain chemicals and make the person feel happy, relaxed, and less anxious. Fitness helps boost
+                confidence and
+                increases a person's self-esteem as it changes the appearance of skin, mind, and body. Home exercise
+                ignites and puts
+                the spark back in a person's sex life as it is a key to treat erectile dysfunction in men. Pregnant
+                women benefit a lot
+                from the home workout as it increases body flexibility and helps them handle</p>
+        </div>
+        <div>
+            <h2>Why is Exercise Important?</h2>
+            <p>Physical exercise burns calories and helps in maintaining weight or prevents weight gain. Home exercise
+                is essential to
+                everybody right from when they are small as they develop motor skills and help with their performance
+                later in life. It
+                allows an individual to perform well in sports later and in other activities that include physical
+                fitness. Performing
+                exercise regularly helps people develop good mental health to fight depression and have a positive
+                outlook. Workout acts
+                as a most excellent stress reliever to fight the numerous problems in our daily lives. Home exercise
+                will help a person
+                handle his/her daily chores with more energy as it improves both heart and lung health. Workout delivers
+                oxygen to all
+                the tissues and provides nutrients to all parts of the body. Home workout boosts the endurance levels in
+                the body.
+                Workout promotes better and in-depth sleep. Hence people who have sleep issues should start prioritizing
+                fitness and
+                exercises. Home workout reasonably lifts the emotions and makes us feel brisk throughout the day. This
+                is because they
+                stimulate brain chemicals and make the person feel happy, relaxed, and less anxious. Fitness helps boost
+                confidence and
+                increases a person's self-esteem as it changes the appearance of skin, mind, and body. Home exercise
+                ignites and puts
+                the spark back in a person's sex life as it is a key to treat erectile dysfunction in men. Pregnant
+                women benefit a lot
+                from the home workout as it increases body flexibility and helps them handle</p>
+        </div>
+        <div>
+            <h2>What are the Different Types of Exercise?</h2>
+            <p>There are a great many exercises to adhere to in our daily routines. They have to be picked up after
+                analyzing and
+                determining the purpose of it. The primary reason to select the kinds of exercise is to improve the
+                ability and reduce
+                boredom and the risk of injury. Because when the same pattern is followed day after day, any individual
+                will lose
+                enthusiasm and get fed up with the monotonous workout schedules. In that manner, exercises can be
+                considerably
+                categorized by the following four components: Endurance: This is to sustain any exercise for an extended
+                period. This is
+                further classified into cardiovascular and muscular endurance. Cardiovascular endurance fuels up the
+                body with oxygen by
+                increasing the ability of the heart and lungs. In contrast, muscular endurance builds up the muscles'
+                capacity and
+                permits the system to workout continuously without fatigue. Strength: Strength in fitness is to work
+                against resistance,
+                and it is merely the maximum force that a muscle can exert against a load. This is efficiently brought
+                into effect by
+                training the body to lift weights. These exercises increase muscle mass, increase bone strength and
+                flexibility of
+                joints. Balance: This is to hold the body coordinated and control its movement and position. Balance is
+                a vital point of
+                fitness. It is achieved by having the same position for a long time by adding movement to various poses
+                comfortably.
+                Flexibility: Flexibility defines the muscle and connective tissues' motion and to what extent or range
+                they can stretch.
+                Doing these exercises will help the body to prevent balance problems, injuries, and other pains linked
+                with joints.
+            </p>
+        </div>
+        <div>
+            <h2>10 Exercises to be Fit in your Day to Day Life</h2>
+            <p>There are a great many exercises to adhere to in our daily routines. They have to be picked up after
+                analyzing and
+                determining the purpose of it. The primary reason to select the kinds of exercise is to improve the
+                ability and reduce
+                boredom and the risk of injury. Because when the same pattern is followed day after day, any individual
+                will lose
+                enthusiasm and get fed up with the monotonous workout schedules. In that manner, exercises can be
+                considerably
+                categorized by the following four components: Endurance: This is to sustain any exercise for an extended
+                period. This is
+                further classified into cardiovascular and muscular endurance. Cardiovascular endurance fuels up the
+                body with oxygen by
+                increasing the ability of the heart and lungs. In contrast, muscular endurance builds up the muscles'
+                capacity and
+                permits the system to workout continuously without fatigue. Strength: Strength in fitness is to work
+                against resistance,
+                and it is merely the maximum force that a muscle can exert against a load. This is efficiently brought
+                into effect by
+                training the body to lift weights. These exercises increase muscle mass, increase bone strength and
+                flexibility of
+                joints. Balance: This is to hold the body coordinated and control its movement and position. Balance is
+                a vital point of
+                fitness. It is achieved by having the same position for a long time by adding movement to various poses
+                comfortably.
+                Flexibility: Flexibility defines the muscle and connective tissues' motion and to what extent or range
+                they can stretch.
+                Doing these exercises will help the body to prevent balance problems, injuries, and other pains linked
+                with joints.</p>
+        </div>
+        <div>
+            <h2>10 Exercises to be Fit in your Day to Day Life</h2>
+            <p>The most common and widely practised 10 best exercises which help to rock the human body are:</p>
+        </div>
+
+    </div>
+    <!-- <div>
+        <div class="divv"></div>
+    </div> -->
+    <!-- Footer -->
+
+    <div id="footer">
+        <div id="footer-container">
+            <div id="footer-part-1">
+                <div id="footer-details">
+                    <div><img src="https://static.cure.fit/assets/images/cult-logo-white.svg" alt="" width="126"
+                            height="42"></div>
+                    <div class="description">
+                        At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy
+                        with yoga & meditation, and medical & lifestyle care hassle-free. #BeBetterEveryDay
+                    </div>
+                </div>
+
+                <ul>
+                    <li><a href="#" target="_blank">CONTACT US</a></li>
+                    <li><a href="#" target="_blank">BLOG</a></li>
+                    <li><a href="#" target="_blank">PARTNER.FIT</a></li>
+                    <li><a href="#" target="_blank">TALKS</a></li>
+                    <li><a href="#" target="_blank">CAREERS</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#" target="_blank">CULTFIT FOR BUSINESSES</a></li>
+                    <li><a href="#" target="_blank">CULT FRANCHISE</a></li>
+                    <li><a href="#" target="_blank">CULT PASS NETWORK</a></li>
+                    <li><a href="#" target="_blank">CORPORATE PARTNERSHIPS</a></li>
+                </ul>
+
+                <ul>
+                    <li class="footer-app-information"><img src="https://static.cure.fit/assets/images/app-store.svg"
+                            alt="" width="80%" onclick="applestore()"></li>
+                    <li class="footer-app-information"><img src="https://static.cure.fit/assets/images/play-store.svg"
+                            alt="" width="80%" onclick="playsotre()"></li>
+                </ul>
+            </div>
+
+            <div id="important-links">
+                <div>RELATED SEARCHES</div>
+                <hr color="#A2A2A2">
+                <div id="important-links-list">
+                    <ul>
+                        <li><a href="#">Gym Near Me</a></li>
+                        <li><a href="#">Consult Nutritionist Online</a></li>
+                        <li><a href="#">Chest Exercises at Home</a></li>
+                        <li><a href="#">Stress Management</a></li>
+                        <li><a href="#">Mindfulness Meditation</a></li>
+                        <li><a href="#">Gyms in Mumbai</a></li>
+                        <li><a href="#">Gyms in Kolkata</a></li>
+                        <li><a href="#">Home Workouts</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Online Personal Training</a></li>
+                        <li><a href="#">Consult Gynecologist Online</a></li>
+                        <li><a href="#">Fat Burning Exercises</a></li>
+                        <li><a href="#">Yoga Asanas</a></li>
+                        <li><a href="#">Yoga Nidra</a></li>
+                        <li><a href="#">Gyms in Delhi</a></li>
+                        <li><a href="#">Gyms in Ahmedabad</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Online Doctor Consultation</a></li>
+                        <li><a href="#">Diagnostic tests</a></li>
+                        <li><a href="#">Six Pack Workout</a></li>
+                        <li><a href="#">Meditation Music</a></li>
+                        <li><a href="#">Dermatologist online</a></li>
+                        <li><a href="#">Gyms in Pune</a></li>
+                        <li><a href="#">Gyms in Chandigarh</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Therapist consultation</a></li>
+                        <li><a href="#">Food Near Me</a></li>
+                        <li><a href="#">Yoga Postures for Beginners</a></li>
+                        <li><a href="#">Pranayama</a></li>
+                        <li><a href="#">Othopedist doctor near me</a></li>
+                        <li><a href="#">Gyms in Hydrabad</a></li>
+                        <li><a href="#">Gyms in Indore</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Online Fitness Classes</a></li>
+                        <li><a href="#">Healthy Recipes</a></li>
+                        <li><a href="#">Surya Namaskar for Beginners</a></li>
+                        <li><a href="#">Bedtime Stories for Kids</a></li>
+                        <li><a href="#">Manchow Soup</a></li>
+                        <li><a href="#">Gyms in Chennai</a></li>
+                        <li><a href="#">Gyms in Coimbatore</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Consult Cardiologist Online</a></li>
+                        <li><a href="#">Reduce Belly Fat</a></li>
+                        <li><a href="#">Yoga for Stress Relief</a></li>
+                        <li><a href="#">Meditation in Hindi</a></li>
+                        <li><a href="#">Badam Milk</a></li>
+                        <li><a href="#">Gyms in Jaipur</a></li>
+                        <li><a href="#">Gyms in Bangalore</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div id="contact-links">
+                    <div><a href="#">Contact us</a></div>
+                    <div><a href="#">FAQ</a></div>
+                    <div><a href="#">Terms and Condition</a></div>
+                    <div><a href="#">Privacy Policy</a></div>
+                    <div><a href="#">Refund Policy</a></div>
+                </div>
+                <div id="icons">
+                    <a href="https://www.youtube.com/channel/UCSE72IaHOL-1Tv-m3JHE4Cg" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/cultfitOfficial/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/cultfitOfficial" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/BeCureFit/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script src="Script.js"></script>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>

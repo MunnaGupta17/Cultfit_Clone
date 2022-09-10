@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cultFit/SignUp</title>
+    <link rel="stylesheet" href="Signup.css">
+</head>
+
+<body>
+    <div id="container-img"></div>
+    <div class="container">
+        <div id="signUp-page">
+            <div id="close-button">
+                <button onclick="window.location.href = 'Home.html'"><span>X</span></button>
+            </div>
+            <div id="login-logo-popup">
+                <div><img src="https://static.cure.fit/assets/images/curefit_login_logo.svg" alt="" id="logo"></div>
+                <img src="https://static.cure.fit/assets/images/cult_name.svg" alt="" id="logo-name">
+            </div>
+            <div class="signup-input-field">
+                <input type="text" id="name" placeholder="Full Name"> <br>
+                <input type="Email" id="email" placeholder="Email address"><br>
+                <input type="number" id="number" placeholder="Phone Number"><br>
+                <input type="Password" id="password" placeholder="Password"><br>
+                <div>By Continuing you agree to <a href="https://static.cult.fit/terms_cult.html"><span> Terms and
+                            Conditions </span></a> and <a href="https://static.cult.fit/privacy_cult.html"><span>Privacy
+                            Policy.</span></a></div>
+                <button onclick="adduser()">Submit</button>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script>
+    function adduser() {
+
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let number = document.getElementById('number').value;
+        let img = "http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png";
+
+        if (name == "") {
+            alert("Name should not be empty!");
+            return;
+        }
+        else if (email == "") {
+            alert("Email should not be empty!");
+            return;
+        }
+        else if (password == "") {
+            alert("Password should not be empty!");
+            return;
+        }
+        else if (number == "") {
+            alert("Number should not be empty!");
+            return;
+        }
+
+        var userObj = {
+            name,
+            email,
+            number,
+            password,
+            img
+        }
+
+        let data = JSON.parse(localStorage.getItem('cultFitUsers'));
+        if (data == null) {
+            data = {};
+        }
+
+        
+        if (data[number] != undefined) {
+            alert(`User with ${number} already exist!`);
+            return;
+        }
+        else{
+            data[number] = userObj;
+        }
+
+        
+
+        localStorage.setItem('cultFitUsers', JSON.stringify(data));
+
+        window.location.href = "Home.html";
+    }
+</script>
+
+</html>
