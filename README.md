@@ -26,4 +26,17 @@ This project is a complete clone UI with some functionalities of cultfit website
 
 
 ## Screenshots
+<img src="./Cultfit_ScreenShots/Home.png" />
+<img src="./Cultfit_ScreenShots/Login.png" />
+<img src="./Cultfit_ScreenShots/profile.png" />
+<img src="./Cultfit_ScreenShots/PasswordChange.png" />
+<img src="./Cultfit_ScreenShots/buyFoods.png" />
+<img src="./Cultfit_ScreenShots/sportswear.png" />
+<img src="./Cultfit_ScreenShots/cart.png" />
+<img src="./Cultfit_ScreenShots/footer.png" />
+<img src="./Cultfit_ScreenShots/workout.png" />
+<img src="./Cultfit_ScreenShots/yoga.png" />
+<img src="./Cultfit_ScreenShots/Appointment.png" />
+<img src="./Cultfit_ScreenShots/appointmentForm.png" />
+<img src="./Cultfit_ScreenShots/buyPass.png" />
 
