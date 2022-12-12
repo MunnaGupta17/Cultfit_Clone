@@ -1,6 +1,8 @@
 # Cultfit Clone
 This project is a complete clone UI with some functionalities of cultfit website like you can make purchase of clothes, foods from here. Used localStorage to save user data, Cart data etc.
 
+deployed link -> https://cultfit-clone.vercel.app/
+
 ## Built with
 <ul>
   <li>HTML</li>
